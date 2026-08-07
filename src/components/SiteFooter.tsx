@@ -20,6 +20,7 @@ export function SiteFooter() {
         <div>
           <p className="footer-label">Company</p>
           <Link href="/work">Work</Link>
+          <Link href="/service-area">Service Area</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/privacy">Privacy</Link>

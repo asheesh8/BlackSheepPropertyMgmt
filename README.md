@@ -8,7 +8,7 @@ Complete rebrand and responsive marketing site for Jeffrey Danaher's Chittenden 
 - Production SVG identity family under `public/brand`
 - Curated and optimized real-project photography under `public/media`
 - Services hub plus Grounds, Interiors, Winter, and Specialty Care routes
-- Work, About, Contact, Privacy, success, and not-found pages
+- Work, Service Area, About, Contact, Privacy, success, and not-found pages
 - Netlify-compatible estimate form with honeypot protection and one optional photo upload
 - Responsive mobile navigation and persistent mobile call/estimate actions
 - Route metadata, accessible HTML, visible focus states, and motion preferences
@@ -45,9 +45,9 @@ docs/site-content.md   Sitemap, copy system, SEO, and client confirmations
 
 ## Hosting and form setup
 
-The app is a Vite static build. When deploying this repository as its own site:
+The app is a Vite static build. The GitHub repository is published as a standalone project with this app at its root. When deploying it:
 
-- Base directory: `BlackSheepPM`
+- Base directory: leave blank / repository root
 - Build command: `npm run build`
 - Publish directory: `dist`
 - Enable form detection in the Netlify project's Forms settings

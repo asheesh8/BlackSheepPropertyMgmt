@@ -30,6 +30,7 @@ All production assets are standalone SVG files with outlined lettering and no ra
 | `public/brand/black-sheep-herd-signature-reversed.svg` | Herd signature for dark surfaces |
 | `public/brand/black-sheep-favicon.svg` | Small digital app/site icon |
 | `public/brand/black-sheep-brand-sheet.svg` | Review sheet; not a substitute for the individual production assets |
+| `public/brand/vermont-service-area.svg` | Editorial Vermont service-area illustration |
 
 ## Logo architecture
 
@@ -172,6 +173,17 @@ Real work is the proof layer. Use Jeffrey's supplied project photographs and aut
 - When copy overlays a photograph, target at least 4.5:1 contrast and protect the subject's face or key work detail.
 
 The cinematic sheep footage is the only deliberately surreal imagery. Once it hands off to the business, the site should become materially real.
+
+## Service-area illustration
+
+`vermont-service-area.svg` uses 2024 U.S. Census cartographic boundary geometry for the Vermont silhouette and county divisions. Chittenden County is highlighted as the primary county focus; Burlington and Essex are orientation references rather than guarantees of service at every address.
+
+- Keep the address/scope qualifier visible whenever the full illustration is used.
+- Do not add town fills or coverage circles without verified operating information from Jeffrey.
+- Do not interpret the abstract contour lines as surveyed elevation data.
+- Do not recolor neighboring counties as additional service areas without confirmation.
+- The live SVG labels use local Helvetica/Arial fallbacks and load no remote font.
+- If a compact mobile crop removes the qualifier, pair the illustration with equivalent HTML copy immediately beside it.
 
 ## Voice
 

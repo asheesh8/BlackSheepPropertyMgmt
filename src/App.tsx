@@ -8,6 +8,7 @@ import { ContactPage } from './pages/ContactPage'
 import { HomePage } from './pages/HomePage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { PrivacyPage } from './pages/PrivacyPage'
+import { ServiceAreaPage } from './pages/ServiceAreaPage'
 import { ServiceDetailPage } from './pages/ServiceDetailPage'
 import { ServicesPage } from './pages/ServicesPage'
 import { ThanksPage } from './pages/ThanksPage'
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/services" component={ServicesPage} />
         <Route path="/services/:serviceId" component={ServiceDetailPage} />
         <Route path="/work" component={WorkPage} />
+        <Route path="/service-area" component={ServiceAreaPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/contact" component={ContactPage} />
         <Route path="/thanks" component={ThanksPage} />

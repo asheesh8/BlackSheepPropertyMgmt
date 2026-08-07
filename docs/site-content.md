@@ -56,6 +56,7 @@ Grounds. Interiors. Winter. And the jobs in between.
 | `/services/winter` | Winter | Snow removal and roof shoveling |
 | `/services/specialty-care` | Specialty Care | Pools, ponds, fish stocking, and handyman work |
 | `/work` | Work | Curated real-project gallery organized by service category |
+| `/service-area` | Service Area | Vermont map, Essex home base, qualified regional context, and availability process |
 | `/about` | About | Jeffrey’s story, the rebrand, and how the company approaches the work |
 | `/contact` | Request an Estimate | Phone, service-area context, hours, and estimate form |
 | `/privacy` | Privacy | Form and analytics privacy notice |
@@ -65,13 +66,14 @@ Grounds. Interiors. Winter. And the jobs in between.
 
 - Services
 - Work
+- Service Area
 - About
 - Contact
 - Primary button: **Request an estimate**
 
 ### Mobile navigation
 
-- Same four links.
+- Same five links.
 - Persistent bottom actions after the hero: **Call** and **Request estimate**.
 - Do not bury the phone number inside a menu-only contact page.
 
@@ -112,6 +114,8 @@ Grounds. Interiors. Winter. And the jobs in between.
 **Direction:** Keep the total copy reveal under 20 words before the brand lockup. No paragraph should sit over the moving flock.
 
 ### Scene 2 — Practical handoff
+
+> **Implemented compact sequence:** After review, the live homepage was shortened to four post-film sections: the four-service index, one selected-work feature, the Vermont service-area teaser, and the combined seasonal closing CTA. The longer scene copy below remains a source library for the dedicated Services, Work, Service Area, and About pages rather than appearing in full on Home.
 
 **Eyebrow:** The whole property
 
