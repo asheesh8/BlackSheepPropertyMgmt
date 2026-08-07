@@ -3,6 +3,7 @@ import { InteractiveVermontMap } from '../components/InteractiveVermontMap'
 import { PageHero } from '../components/PageHero'
 import { PageMeta } from '../components/PageMeta'
 import { Reveal } from '../components/Reveal'
+import { ServiceAreaConfirmation } from '../components/ServiceAreaConfirmation'
 
 const areaReferences = [
   { label: 'Home base', value: 'Essex, Vermont' },
@@ -97,24 +98,7 @@ export function ServiceAreaPage() {
         </figure>
       </section>
 
-      <section className="service-area-confirm section-pad section-green" aria-labelledby="service-area-confirm-title">
-        <Reveal className="service-area-confirm__intro">
-          <p className="eyebrow eyebrow--light">Confirm your address</p>
-          <h2 id="service-area-confirm-title">Three details. One direct answer.</h2>
-        </Reveal>
-
-        <ol className="service-area-confirm__steps">
-          {confirmationSteps.map((step, index) => (
-            <li key={step.index}>
-              <Reveal delay={index * 80}>
-                <span>{step.index}</span>
-                <h3>{step.title}</h3>
-                <p>{step.body}</p>
-              </Reveal>
-            </li>
-          ))}
-        </ol>
-      </section>
+      <ServiceAreaConfirmation steps={confirmationSteps} />
 
       <section className="simple-cta section-pad section-dark">
         <p className="eyebrow eyebrow--light">Have an address in mind?</p>
