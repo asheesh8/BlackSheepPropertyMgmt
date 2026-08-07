@@ -1,6 +1,7 @@
 import { Link } from 'wouter'
 import { ArrowLink } from '../components/ArrowLink'
 import { CinematicHero } from '../components/CinematicHero'
+import { InteractiveVermontMap } from '../components/InteractiveVermontMap'
 import { PageMeta } from '../components/PageMeta'
 import { Reveal } from '../components/Reveal'
 import { contact, services } from '../data/site'
@@ -72,17 +73,7 @@ export function HomePage() {
           <h2>Made for a Vermont year.</h2>
         </Reveal>
         <Reveal className="home-area__visual" delay={120}>
-          <figure className="home-area__figure">
-            <img
-              src="/brand/vermont-service-area.svg"
-              alt="Vermont service area illustration highlighting Chittenden County."
-              loading="lazy"
-            />
-            <figcaption>
-              <p>Based in Essex and serving homes and businesses throughout Chittenden County.</p>
-              <ArrowLink to="/service-area">Explore the service area</ArrowLink>
-            </figcaption>
-          </figure>
+          <InteractiveVermontMap compact />
         </Reveal>
       </section>
 

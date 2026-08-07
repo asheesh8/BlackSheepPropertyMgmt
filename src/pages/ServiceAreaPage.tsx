@@ -1,4 +1,5 @@
 import { Link } from 'wouter'
+import { InteractiveVermontMap } from '../components/InteractiveVermontMap'
 import { PageHero } from '../components/PageHero'
 import { PageMeta } from '../components/PageMeta'
 import { Reveal } from '../components/Reveal'
@@ -49,13 +50,7 @@ export function ServiceAreaPage() {
         </Reveal>
 
         <Reveal className="service-area-map__visual" delay={120}>
-          <figure>
-            <img src="/brand/vermont-service-area.svg" alt="" aria-hidden="true" />
-            <figcaption>
-              <span>Home base</span>
-              <strong>Essex, Vermont</strong>
-            </figcaption>
-          </figure>
+          <InteractiveVermontMap />
         </Reveal>
       </section>
 
