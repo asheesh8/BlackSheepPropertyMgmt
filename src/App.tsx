@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { SiteFooter } from './components/SiteFooter'
 import { SiteHeader } from './components/SiteHeader'
 import { MobileActions } from './components/MobileActions'
+import { PropertyChat } from './components/PropertyChat'
 import { AboutPage } from './pages/AboutPage'
 import { ContactPage } from './pages/ContactPage'
 import { HomePage } from './pages/HomePage'
@@ -31,6 +32,7 @@ export default function App() {
       <a className="skip-link" href="#main-content">Skip to content</a>
       <SiteHeader />
       <MobileActions />
+      <PropertyChat />
       <Switch>
         <Route path="/" component={HomePage} />
         <Route path="/services" component={ServicesPage} />

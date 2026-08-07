@@ -353,6 +353,353 @@ p {
   display: none;
 }
 
+/* Property helper */
+.property-chat {
+  --chat-bottom: max(1rem, env(safe-area-inset-bottom));
+  position: fixed;
+  z-index: 950;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: var(--chat-bottom);
+}
+
+.property-chat__launcher {
+  display: grid;
+  width: 15.75rem;
+  min-height: 4.2rem;
+  grid-template-columns: 3rem 1fr auto;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0.8rem 0.55rem 0.55rem;
+  color: var(--ink);
+  border: 1px solid rgba(17, 19, 17, 0.2);
+  background: rgba(242, 239, 231, 0.96);
+  box-shadow: 0 1rem 3rem rgba(17, 19, 17, 0.2);
+  cursor: pointer;
+  text-align: left;
+  transition: opacity 180ms ease, transform 260ms cubic-bezier(0.22, 1, 0.36, 1), background 180ms ease;
+}
+
+.property-chat__launcher:hover {
+  background: var(--paper);
+  transform: translateY(-0.18rem);
+}
+
+.property-chat.is-open .property-chat__launcher {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.5rem);
+  visibility: hidden;
+}
+
+.property-chat__launcher-mark {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.property-chat__launcher-mark img {
+  width: 2.4rem;
+}
+
+.property-chat__launcher-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+
+.property-chat__launcher-copy small,
+.property-chat__launcher-copy strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.property-chat__launcher-copy small {
+  color: rgba(17, 19, 17, 0.58);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.49rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.property-chat__launcher-copy strong {
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.property-chat__launcher-arrow {
+  font-size: 0.8rem;
+}
+
+.property-chat__panel {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 0.75rem);
+  display: grid;
+  width: min(24rem, calc(100vw - 2rem));
+  max-height: min(38rem, calc(100dvh - var(--header-height) - var(--chat-bottom) - 5.5rem));
+  grid-template-rows: auto minmax(8rem, 1fr) auto auto auto;
+  overflow: hidden;
+  color: var(--ink);
+  border: 1px solid rgba(242, 239, 231, 0.2);
+  background: var(--paper);
+  box-shadow: 0 1.5rem 5rem rgba(17, 19, 17, 0.34);
+  outline: none;
+  animation: property-chat-in 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes property-chat-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.8rem) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.property-chat__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  color: var(--bone);
+  border-bottom: 1px solid var(--line-light);
+  background: var(--ink);
+}
+
+.property-chat__identity {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.property-chat__avatar {
+  display: grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid var(--line-light);
+}
+
+.property-chat__avatar img {
+  width: 2rem;
+}
+
+.property-chat__identity h2 {
+  margin: 0 0 0.14rem;
+  font-size: 1.15rem;
+  font-weight: 650;
+  font-stretch: 92%;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.property-chat__identity div > span {
+  display: block;
+  overflow: hidden;
+  color: rgba(242, 239, 231, 0.64);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.48rem;
+  letter-spacing: 0.08em;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.property-chat__close {
+  position: relative;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex: 0 0 auto;
+  border: 1px solid var(--line-light);
+  background: transparent;
+  cursor: pointer;
+}
+
+.property-chat__close::before,
+.property-chat__close::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.9rem;
+  height: 1px;
+  background: var(--bone);
+  content: '';
+}
+
+.property-chat__close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.property-chat__close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.property-chat__log {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 1rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  list-style: none;
+  background: var(--paper);
+  scrollbar-color: rgba(17, 19, 17, 0.32) transparent;
+  scrollbar-width: thin;
+}
+
+.property-chat__message {
+  display: grid;
+  grid-template-columns: 1.65rem minmax(0, 1fr);
+  align-items: end;
+  gap: 0.45rem;
+}
+
+.property-chat__message > div {
+  max-width: 90%;
+  padding: 0.82rem 0.88rem;
+  border: 1px solid var(--line);
+  background: var(--bone);
+}
+
+.property-chat__message p {
+  margin: 0;
+  font-size: 0.79rem;
+  line-height: 1.48;
+}
+
+.property-chat__message-mark {
+  display: grid;
+  width: 1.65rem;
+  height: 1.65rem;
+  place-items: center;
+  border: 1px solid var(--line);
+}
+
+.property-chat__message-mark img {
+  width: 1.35rem;
+}
+
+.property-chat__message--visitor {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.property-chat__message--visitor > div {
+  max-width: 82%;
+  color: var(--bone);
+  border-color: var(--green);
+  background: var(--green);
+}
+
+.property-chat__message-action {
+  display: inline-flex;
+  min-height: 2.25rem;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.7rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid currentColor;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.54rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.property-chat__prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--line);
+  background: var(--bone);
+}
+
+.property-chat__prompts button {
+  min-height: 2.75rem;
+  padding: 0.48rem 0.58rem;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  background: transparent;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.49rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: color 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.property-chat__prompts button:hover,
+.property-chat__prompts button:focus-visible {
+  color: var(--bone);
+  border-color: var(--ink);
+  background: var(--ink);
+}
+
+.property-chat__composer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 3.2rem;
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.property-chat__composer input {
+  width: 100%;
+  min-width: 0;
+  padding: 0.92rem 1rem;
+  color: var(--ink);
+  border: 0;
+  background: transparent;
+  font-size: 0.78rem;
+  outline: none;
+}
+
+.property-chat__composer input::placeholder {
+  color: rgba(17, 19, 17, 0.48);
+}
+
+.property-chat__composer:focus-within {
+  box-shadow: inset 0 0 0 2px #a7c194;
+}
+
+.property-chat__composer button {
+  color: var(--bone);
+  border: 0;
+  background: var(--ink);
+  cursor: pointer;
+}
+
+.property-chat__composer button:disabled {
+  opacity: 0.32;
+  cursor: default;
+}
+
+.property-chat__notice {
+  margin: 0;
+  padding: 0.45rem 1rem;
+  color: rgba(17, 19, 17, 0.54);
+  border-top: 1px solid var(--line);
+  background: var(--bone);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.46rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* Cinematic hero */
 .cinematic-hero {
   position: relative;
@@ -2636,6 +2983,62 @@ p {
     background: var(--bone);
   }
 
+  .property-chat {
+    --chat-bottom: max(0.7rem, env(safe-area-inset-bottom));
+    right: max(0.7rem, env(safe-area-inset-right));
+  }
+
+  .mobile-actions.is-visible + .property-chat {
+    --chat-bottom: calc(max(0.7rem, env(safe-area-inset-bottom)) + 4.1rem);
+  }
+
+  .property-chat__launcher {
+    width: 3.65rem;
+    min-height: 3.65rem;
+    grid-template-columns: 1fr;
+    padding: 0.35rem;
+    border-radius: 50%;
+  }
+
+  .property-chat__launcher-mark {
+    width: 2.95rem;
+    height: 2.95rem;
+    border: 0;
+    border-radius: 50%;
+  }
+
+  .property-chat__launcher-copy,
+  .property-chat__launcher-arrow {
+    display: none;
+  }
+
+  .property-chat__panel {
+    position: fixed;
+    right: max(0.7rem, env(safe-area-inset-right));
+    bottom: var(--chat-bottom);
+    width: calc(100vw - 1.4rem - env(safe-area-inset-left) - env(safe-area-inset-right));
+    max-height: min(36rem, calc(100dvh - var(--header-height) - var(--chat-bottom) - 5.2rem));
+  }
+
+  .property-chat__prompts {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .property-chat__prompts::-webkit-scrollbar {
+    display: none;
+  }
+
+  .property-chat__prompts button {
+    flex: 0 0 auto;
+  }
+
+  .site-footer {
+    padding-bottom: calc(6.5rem + env(safe-area-inset-bottom));
+  }
+
   .cinematic-hero {
     height: 160svh;
   }
@@ -3072,6 +3475,48 @@ p {
   }
 }
 
+@media (max-height: 560px) {
+  .property-chat__panel {
+    position: fixed;
+    top: calc(var(--header-height) + 0.4rem);
+    right: max(0.7rem, env(safe-area-inset-right));
+    bottom: max(0.5rem, env(safe-area-inset-bottom));
+    width: min(24rem, calc(100vw - 1.4rem - env(safe-area-inset-left) - env(safe-area-inset-right)));
+    height: auto;
+    max-height: none;
+    grid-template-rows: auto minmax(0, 1fr) auto auto auto;
+  }
+
+  .property-chat__header {
+    padding: 0.55rem 0.7rem;
+  }
+
+  .property-chat__log {
+    padding: 0.65rem;
+  }
+
+  .property-chat__prompts {
+    flex-wrap: nowrap;
+    padding: 0.5rem 0.65rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .property-chat__prompts::-webkit-scrollbar {
+    display: none;
+  }
+
+  .property-chat__prompts button {
+    flex: 0 0 auto;
+  }
+
+  .property-chat__notice {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+}
+
 @media (pointer: coarse) {
   .interactive-map__cursor {
     display: none;
@@ -3123,6 +3568,11 @@ p {
   }
 
   .home-proof .about-slice__media:hover .about-slice__mark {
+    transform: none;
+  }
+
+  .property-chat__panel {
+    animation: none;
     transform: none;
   }
 }
