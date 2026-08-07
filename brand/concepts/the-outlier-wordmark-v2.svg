@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Black Sheep Property Management — The Outlier wordmark</title>
+  <desc id="desc">A bold editorial wordmark with one reversed E representing the black sheep that moves differently.</desc>
+
+  <rect width="1600" height="1000" fill="#f2efe7" />
+
+  <!-- Compact header lockup -->
+  <g fill="#111311">
+    <text x="104" y="116" font-family="DIN Condensed, Avenir Next Condensed, Helvetica Neue, Arial, sans-serif"
+      font-size="62" font-weight="700" letter-spacing="2">BLACK SH</text>
+    <g transform="translate(465 65)">
+      <path d="M45 0H0V12H31V25H4V37H31V52H0V64H45Z" />
+    </g>
+    <text x="516" y="116" font-family="DIN Condensed, Avenir Next Condensed, Helvetica Neue, Arial, sans-serif"
+      font-size="62" font-weight="700" letter-spacing="2">EP</text>
+    <text x="106" y="154" font-family="Helvetica Neue, Arial, sans-serif"
+      font-size="13" font-weight="500" letter-spacing="8">PROPERTY MANAGEMENT</text>
+  </g>
+
+  <line x1="103" y1="201" x2="1497" y2="201" stroke="#111311" stroke-width="2" />
+
+  <!-- Primary stacked wordmark. The first E in SHEEP is custom-drawn backward. -->
+  <g fill="#111311">
+    <text x="122" y="520" font-family="DIN Condensed, Avenir Next Condensed, Helvetica Neue, Arial, sans-serif"
+      font-size="360" font-weight="700" letter-spacing="7">BLACK</text>
+
+    <text x="122" y="840" font-family="DIN Condensed, Avenir Next Condensed, Helvetica Neue, Arial, sans-serif"
+      font-size="360" font-weight="700" letter-spacing="7">SH</text>
+
+    <!-- Deliberately reversed E: a typographic black sheep, not a gimmick icon. -->
+    <g transform="translate(655 579)">
+      <path d="M205 0H0V55H146V105H18V160H146V211H0V266H205Z" />
+    </g>
+
+    <text x="887" y="840" font-family="DIN Condensed, Avenir Next Condensed, Helvetica Neue, Arial, sans-serif"
+      font-size="360" font-weight="700" letter-spacing="7">EP</text>
+  </g>
+
+  <g transform="translate(1094 259)">
+    <line x1="0" y1="0" x2="0" y2="248" stroke="#111311" stroke-width="2" />
+    <text x="42" y="28" fill="#111311" font-family="Helvetica Neue, Arial, sans-serif"
+      font-size="16" font-weight="500" letter-spacing="4">THE OUTLIER</text>
+    <text x="42" y="67" fill="#111311" font-family="Helvetica Neue, Arial, sans-serif"
+      font-size="16" font-weight="500" letter-spacing="4">IS THE SYSTEM.</text>
+    <text x="42" y="150" fill="#111311" opacity="0.7" font-family="Helvetica Neue, Arial, sans-serif"
+      font-size="14" font-weight="400" letter-spacing="2.2">PROPERTY CARE</text>
+    <text x="42" y="180" fill="#111311" opacity="0.7" font-family="Helvetica Neue, Arial, sans-serif"
+      font-size="14" font-weight="400" letter-spacing="2.2">CHITTENDEN COUNTY, VT</text>
+  </g>
+
+  <text x="112" y="938" fill="#111311" font-family="Helvetica Neue, Arial, sans-serif"
+    font-size="18" font-weight="500" letter-spacing="10">PROPERTY MANAGEMENT</text>
+  <line x1="923" y1="930" x2="1498" y2="930" stroke="#111311" stroke-width="3" />
+</svg>

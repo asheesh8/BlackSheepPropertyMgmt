@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Black Sheep Property Management — The Turn concept</title>
+  <desc id="desc">A solid black sheep moves left while three outlined sheep move right, above a restrained wordmark.</desc>
+
+  <defs>
+    <path id="sheep-right" d="
+      M 18 42
+      L 30 35
+      L 39 27
+      L 53 22
+      L 65 29
+      L 81 20
+      L 95 27
+      L 111 23
+      L 122 32
+      L 128 28
+      L 140 20
+      L 154 25
+      L 161 38
+      L 153 51
+      L 138 56
+      L 123 50
+      L 120 69
+      L 133 94
+      L 114 94
+      L 102 71
+      L 63 71
+      L 50 94
+      L 31 94
+      L 42 68
+      L 27 65
+      L 17 55
+      Z" />
+    <filter id="soft-paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="2" seed="11" result="noise" />
+      <feColorMatrix in="noise" type="saturate" values="0" result="mono" />
+      <feComponentTransfer in="mono" result="faint">
+        <feFuncA type="table" tableValues="0 0.035" />
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="faint" mode="multiply" />
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#f2efe7" />
+  <rect width="1600" height="1000" fill="#f2efe7" filter="url(#soft-paper)" opacity="0.35" />
+
+  <!-- The black sheep deliberately travels against the three-animal herd. -->
+  <g transform="translate(346 250) scale(1.35)">
+    <use href="#sheep-right" transform="translate(178 0) scale(-1 1)" fill="#111311" />
+  </g>
+
+  <g fill="#f2efe7" stroke="#111311" stroke-width="5.3" stroke-linejoin="miter" transform="translate(640 250) scale(1.35)">
+    <use href="#sheep-right" />
+    <use href="#sheep-right" transform="translate(192 0)" />
+    <use href="#sheep-right" transform="translate(384 0)" />
+  </g>
+
+  <line x1="557" y1="236" x2="557" y2="395" stroke="#111311" stroke-width="3" />
+
+  <g fill="#111311" text-anchor="middle">
+    <text x="800" y="620"
+      font-family="Avenir Next Condensed, Helvetica Neue, Arial, sans-serif"
+      font-size="154"
+      font-weight="700"
+      letter-spacing="7">BLACK SHEEP</text>
+    <text x="800" y="716"
+      font-family="Helvetica Neue, Arial, sans-serif"
+      font-size="34"
+      font-weight="500"
+      letter-spacing="15">PROPERTY MANAGEMENT</text>
+  </g>
+
+  <line x1="253" y1="698" x2="454" y2="698" stroke="#111311" stroke-width="3" />
+  <line x1="1146" y1="698" x2="1347" y2="698" stroke="#111311" stroke-width="3" />
+
+  <text x="800" y="862" fill="#111311" opacity="0.72" text-anchor="middle"
+    font-family="Helvetica Neue, Arial, sans-serif" font-size="24" font-weight="400" letter-spacing="3.5">
+    PROPERTY CARE THAT STANDS APART
+  </text>
+</svg>
