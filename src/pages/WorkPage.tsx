@@ -7,13 +7,13 @@ export function WorkPage() {
   return (
     <main id="main-content" className="inner-page">
       <PageMeta
-        title="Selected Work | Black Sheep Property Management"
-        description="A closer look at grounds, interiors, winter work, and specialty property care across Chittenden County."
+        title="Selected Work | Black Sheep Landscaping"
+        description="A closer look at lawn, landscape, seasonal, and additional property work across Chittenden County."
       />
       <PageHero
         eyebrow="Selected work"
         title={<>Proof lives<br />in the details.</>}
-        body="A closer look at the grounds, interiors, seasonal work, and specialty care handled by Jeffrey’s team."
+        body="A closer look at the lawns, landscapes, seasonal work, and additional care handled by Jeffrey’s team."
       />
       <section className="work-page section-pad">
         <WorkGrid filterable />

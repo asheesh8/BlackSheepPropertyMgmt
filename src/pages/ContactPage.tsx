@@ -9,13 +9,13 @@ export function ContactPage() {
   return (
     <main id="main-content" className="inner-page contact-page">
       <PageMeta
-        title="Request an Estimate | Black Sheep Property Management"
-        description="Tell Black Sheep what your Chittenden County home or business needs and request a property-care estimate."
+        title="Request an Estimate | Black Sheep Landscaping"
+        description="Tell Black Sheep what your Chittenden County lawn or landscape needs and request an estimate."
       />
       <section className="contact-hero section-pad">
         <div>
           <p className="eyebrow">Contact</p>
-          <h1>What does the<br />property need?</h1>
+          <h1>What does the<br />landscape need?</h1>
           <p>Tell us about the work, where the property is, and the best way to reach you. We’ll follow up about the next step.</p>
         </div>
         <aside className="contact-direct">

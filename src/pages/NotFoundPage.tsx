@@ -4,7 +4,7 @@ import { PageMeta } from '../components/PageMeta'
 export function NotFoundPage() {
   return (
     <main id="main-content" className="message-page section-pad">
-      <PageMeta title="Page Not Found | Black Sheep Property Management" description="The requested page could not be found." />
+      <PageMeta title="Page Not Found | Black Sheep Landscaping" description="The requested page could not be found." />
       <img src="/brand/black-sheep-mark.svg" alt="" />
       <p className="eyebrow">404</p>
       <h1>This page wandered off.</h1>

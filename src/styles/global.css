@@ -284,8 +284,8 @@ p {
 }
 
 .site-header__brand img {
-  width: 10.5rem;
-  max-height: 2.7rem;
+  width: clamp(11rem, 13vw, 12.75rem);
+  max-height: 3.15rem;
   object-fit: contain;
   object-position: left center;
 }
@@ -2939,7 +2939,7 @@ p {
   }
 
   .site-header__brand img {
-    width: 8.6rem;
+    width: 9.6rem;
   }
 
   .mobile-actions {

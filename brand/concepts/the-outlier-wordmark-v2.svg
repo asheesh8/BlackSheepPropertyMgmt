@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
-  <title id="title">Black Sheep Property Management — The Outlier wordmark</title>
+  <title id="title">Black Sheep Landscaping — archived Outlier wordmark</title>
   <desc id="desc">A bold editorial wordmark with one reversed E representing the black sheep that moves differently.</desc>
 
   <rect width="1600" height="1000" fill="#f2efe7" />
@@ -14,7 +14,7 @@
     <text x="516" y="116" font-family="DIN Condensed, Avenir Next Condensed, Helvetica Neue, Arial, sans-serif"
       font-size="62" font-weight="700" letter-spacing="2">EP</text>
     <text x="106" y="154" font-family="Helvetica Neue, Arial, sans-serif"
-      font-size="13" font-weight="500" letter-spacing="8">PROPERTY MANAGEMENT</text>
+      font-size="13" font-weight="500" letter-spacing="8">LANDSCAPING</text>
   </g>
 
   <line x1="103" y1="201" x2="1497" y2="201" stroke="#111311" stroke-width="2" />
@@ -49,6 +49,6 @@
   </g>
 
   <text x="112" y="938" fill="#111311" font-family="Helvetica Neue, Arial, sans-serif"
-    font-size="18" font-weight="500" letter-spacing="10">PROPERTY MANAGEMENT</text>
+    font-size="18" font-weight="500" letter-spacing="10">LANDSCAPING</text>
   <line x1="923" y1="930" x2="1498" y2="930" stroke="#111311" stroke-width="3" />
 </svg>

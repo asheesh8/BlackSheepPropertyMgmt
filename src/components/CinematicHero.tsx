@@ -69,9 +69,9 @@ export function CinematicHero() {
         </div>
 
         <div className="cinematic-hero__brand" style={{ opacity: brandOpacity }}>
-          <p className="eyebrow eyebrow--light">Property care · Essex, Vermont</p>
-          <h1 id="hero-title">Black Sheep<br />Property Management</h1>
-          <p>Grounds. Interiors. Winter.<br />And the jobs in between.</p>
+          <p className="eyebrow eyebrow--light">Landscaping · Essex, Vermont</p>
+          <h1 id="hero-title">Black Sheep<br />Landscaping</h1>
+          <p>Lawns. Landscapes. Seasonal care.<br />The work that keeps them standing out.</p>
           <div className="cinematic-hero__actions">
             <Link className="button button--light" href="/contact">Request an estimate</Link>
             <Link className="text-link text-link--light" href="/services">Explore our services <span aria-hidden="true">↘</span></Link>

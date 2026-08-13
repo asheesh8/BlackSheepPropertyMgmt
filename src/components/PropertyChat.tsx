@@ -21,9 +21,9 @@ type ChatOption = {
 
 const options: ChatOption[] = [
   {
-    label: 'Lawn & grounds',
+    label: 'Lawn & landscaping',
     response: 'You’re in the right pasture. We handle mowing, mulching, cleanups, landscaping, and ongoing grounds care.',
-    action: { label: 'Explore grounds care', href: '/services/grounds' },
+    action: { label: 'Explore landscaping', href: '/services/grounds' },
   },
   {
     label: 'Cleaning inside',
@@ -136,10 +136,10 @@ export function PropertyChat() {
               </span>
               <div>
                 <h2 id="property-chat-title">Black Sheep</h2>
-                <span>Property helper · Guided preview</span>
+                <span>Landscaping guide · Preview</span>
               </div>
             </div>
-            <button type="button" className="property-chat__close" onClick={() => closeChat()} aria-label="Close property helper">
+            <button type="button" className="property-chat__close" onClick={() => closeChat()} aria-label="Close landscaping guide">
               <span aria-hidden="true" />
             </button>
           </div>
@@ -193,7 +193,7 @@ export function PropertyChat() {
         ref={launcherRef}
         className="property-chat__launcher"
         type="button"
-        aria-label="Open Black Sheep property helper"
+        aria-label="Open Black Sheep landscaping guide"
         aria-hidden={open}
         aria-expanded={open}
         aria-controls={open ? 'property-chat-panel' : undefined}

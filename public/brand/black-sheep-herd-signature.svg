@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 190" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision">
-  <title id="title">Black Sheep Property Management herd signature</title>
+  <title id="title">Black Sheep Landscaping herd signature</title>
   <desc id="desc">One solid sheep travels left while three outlined sheep travel right.</desc>
   <defs><path id="herd-sheep" d="M38 30 L24 17 L10 18 L5 30 L21 45 L25 60 L25 78 L37 78 L29 112 L48 112 L59 80 L115 80 L131 112 L150 112 L141 77 C155 70 163 57 159 42 L147 30 L71 30 L58 17 Z"/></defs>
   <g transform="translate(35 25)" fill="#121411"><use href="#herd-sheep"/></g>

@@ -10,19 +10,19 @@ export function HomePage() {
   return (
     <main id="main-content">
       <PageMeta
-        title="Black Sheep Property Management | Chittenden County, VT"
-        description="Grounds, cleaning, snow removal, and specialty property care for homes and businesses across Chittenden County, Vermont."
+        title="Black Sheep Landscaping | Chittenden County, VT"
+        description="Lawn care, landscaping, seasonal cleanup, snow removal, and year-round outdoor care across Chittenden County, Vermont."
       />
       <CinematicHero />
 
       <section className="service-ledger home-services section-pad section-dark">
         <div className="section-heading section-heading--split section-heading--light">
           <Reveal>
-            <p className="eyebrow eyebrow--light">The whole property</p>
+            <p className="eyebrow eyebrow--light">Lawn, landscape & beyond</p>
             <h2>Four ways<br />in.</h2>
           </Reveal>
           <Reveal delay={120}>
-            <p>Grounds, interiors, winter, and specialty care. Start with the work in front of you—or bring us the whole list.</p>
+            <p>Landscaping leads the way, backed by seasonal and additional property services. Start with the work in front of you—or bring us the whole list.</p>
             <ArrowLink to="/services">View all services</ArrowLink>
           </Reveal>
         </div>
@@ -61,7 +61,7 @@ export function HomePage() {
           <Reveal><p className="eyebrow">Selected work</p></Reveal>
           <Reveal delay={80}><h2>The work,<br />up close.</h2></Reveal>
           <Reveal delay={140}>
-            <p>A closer look at the grounds, interiors, winter work, and specialty care handled by Jeffrey’s team.</p>
+            <p>A closer look at the lawns, landscapes, seasonal work, and additional care handled by Jeffrey’s team.</p>
             <ArrowLink to="/work">See selected work</ArrowLink>
           </Reveal>
         </div>
@@ -83,7 +83,7 @@ export function HomePage() {
         </div>
         <Reveal>
           <p className="eyebrow eyebrow--light">Every Vermont season</p>
-          <h2>Tell us what the<br />property needs.</h2>
+          <h2>Tell us what the<br />landscape needs.</h2>
         </Reveal>
         <Reveal className="closing-cta__details" delay={120}>
           <p>Spring cleanup. Summer grounds. Fall outdoor care. Winter snow. One service or several—send the details and we’ll follow up about the next step.</p>

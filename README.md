@@ -1,6 +1,6 @@
-# Black Sheep Property Management
+# Black Sheep Landscaping
 
-Complete rebrand and responsive marketing site for Jeffrey Danaher's Chittenden County property-care company.
+Complete rebrand and responsive marketing site for Jeffrey Danaher's Chittenden County landscaping company.
 
 ## What is included
 
@@ -59,7 +59,7 @@ The app is a Vite static build. The GitHub repository is published as a standalo
 
 Review the full confirmation list in `docs/site-content.md`. At minimum, Jeffrey should confirm:
 
-- The legal/DBA status of Black Sheep Property Management
+- The legal/DBA status of Black Sheep Landscaping
 - Exact service area, phone, location, and public hours
 - Whether residential and commercial availability applies to every division
 - Final service scope, especially winter, pool/pond, and handyman work

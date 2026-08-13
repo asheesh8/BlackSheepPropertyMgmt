@@ -28,7 +28,7 @@ export function SiteHeader() {
   return (
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''} ${open ? 'is-open' : ''}`}>
       <div className="site-header__inner">
-        <Link className="site-header__brand" href="/" aria-label="Black Sheep Property Management home">
+        <Link className="site-header__brand" href="/" aria-label="Black Sheep Landscaping home">
           <img src="/brand/black-sheep-lockup-horizontal-reversed.svg" alt="" />
           <span className="site-header__brand-text">BLACK SHEEP</span>
         </Link>

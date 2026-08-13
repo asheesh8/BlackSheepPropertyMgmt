@@ -33,8 +33,8 @@ export function ServiceAreaPage() {
   return (
     <main id="main-content" className="inner-page service-area-page">
       <PageMeta
-        title="Service Area | Black Sheep Property Management"
-        description="Confirm property-care availability from Black Sheep's Essex base across Chittenden County and the greater Burlington area."
+        title="Service Area | Black Sheep Landscaping"
+        description="Confirm landscaping availability from Black Sheep's Essex base across Chittenden County and the greater Burlington area."
       />
       <PageHero
         eyebrow="Service area"
@@ -67,7 +67,7 @@ export function ServiceAreaPage() {
         <Reveal className="service-area-ledger__copy">
           <p className="eyebrow">No vague radius</p>
           <h2 id="service-area-ledger-title">The property comes first.</h2>
-          <p>Black Sheep handles homes and businesses, recurring property care, and one-off work. The practical service area changes with the job, so the address is part of every useful estimate.</p>
+          <p>Black Sheep handles homes and businesses, recurring lawn and landscape care, seasonal work, and select one-off jobs. The practical service area changes with the job, so the address is part of every useful estimate.</p>
           <dl>
             {areaReferences.map((item) => (
               <div key={item.label}>
@@ -90,11 +90,11 @@ export function ServiceAreaPage() {
         </figure>
         <figure className="service-area-proof__detail">
           <img
-            src="/media/projects/interiors-primary.webp"
-            alt="Clean modern commercial office with open workstations."
+            src="/media/projects/gallery-03.webp"
+            alt="Fresh mower stripes running across a large green lawn."
             loading="lazy"
           />
-          <figcaption>Interior and commercial care</figcaption>
+          <figcaption>Lawn care across the county</figcaption>
         </figure>
       </section>
 

@@ -1,6 +1,6 @@
-# Black Sheep Property Management — Site Content System
+# Black Sheep Landscaping — Site Content System
 
-Working master for the rebrand of Jeffrey Danaher Property Management.
+Working master for Jeffrey Danaher’s Black Sheep Landscaping rebrand.
 
 Source reviewed: [danaherpropertymanagement.com](https://danaherpropertymanagement.com) on August 7, 2026. The current site is used only for factual service and business information. Its voice, visual style, structure, and claims have not been carried forward automatically.
 
@@ -8,7 +8,7 @@ Source reviewed: [danaherpropertymanagement.com](https://danaherpropertymanageme
 
 ### Positioning
 
-Black Sheep Property Management is a local property care and maintenance company for homes and businesses in Chittenden County, Vermont. The offer is practical and broad: grounds, interiors, winter work, and specialty upkeep from one team.
+Black Sheep Landscaping is a local lawn and landscape care company for homes and businesses in Chittenden County, Vermont, backed by seasonal and additional property services.
 
 ### One-sentence description
 
@@ -33,15 +33,15 @@ Grounds. Interiors. Winter. And the jobs in between.
 - “Transform your property” unless a genuine transformation is being shown.
 - “Hassle-free,” “stress-free,” and “focus on what matters most.”
 - Fake metrics, rankings, guarantees, testimonials, or response-time promises.
-- Language that implies leasing, tenant placement, rent collection, or financial property management unless Jeffrey confirms those services.
+- Language that implies leasing, tenant placement, rent collection, or financial management unless Jeffrey confirms those services.
 - A sheep pun in every section.
 
 ### Naming rules
 
-- First reference: **Black Sheep Property Management**
+- First reference: **Black Sheep Landscaping**
 - Later references: **Black Sheep**
 - Owner: **Jeffrey Danaher**
-- Never use “Black Sheep Landscaping” as the umbrella brand unless it becomes a separate service division.
+- Use “Black Sheep Landscaping” as the public-facing umbrella brand.
 
 ---
 
@@ -99,7 +99,7 @@ Grounds. Interiors. Winter. And the jobs in between.
 
 3. As the camera follows:
 
-   > **Black Sheep Property Management**  
+   > **Black Sheep Landscaping**
    > Grounds. Interiors. Winter. And the jobs in between.
 
 **Actions:**
@@ -229,7 +229,7 @@ Action: **Explore Specialty Care**
 
 > Jeffrey Danaher learned property maintenance working alongside his father. He went on to build a team serving homes and businesses throughout Chittenden County.
 >
-> Black Sheep Property Management is the next chapter: broad, practical property care from people who take pride in the work and pay attention to the details that shape a property every day.
+> Black Sheep Landscaping is the next chapter: practical lawn and landscape care from people who take pride in the work and pay attention to the details that shape a property every day.
 
 **Action:** **Meet Black Sheep**
 
@@ -541,9 +541,9 @@ This wording does not imply 24-hour dispatch, automatic storm response, ice trea
 
 ### Story
 
-> Jeffrey Danaher was introduced to property maintenance working alongside his father. That foundation became Jeffrey Danaher Property Management, a local team serving commercial and residential clients across Chittenden County.
+> Jeffrey Danaher was introduced to landscaping and property maintenance working alongside his father. That foundation became a local team serving commercial and residential clients across Chittenden County.
 >
-> Black Sheep Property Management marks the company’s next chapter. The name is new. The work remains grounded in the same things: taking pride in the result, valuing the people doing it, and caring for the whole property—not just the most visible part.
+> Black Sheep Landscaping marks the company’s next chapter. The name is new. The work remains grounded in pride, attention to detail, and caring for every lawn and landscape like it is our own.
 
 ### Mission
 
@@ -563,7 +563,7 @@ This is proposed brand language. Jeffrey should approve it as an operating promi
 |---|---|
 | Foundation | 15 years learning property maintenance alongside his father |
 | Company | 18 years building and leading his own property-care team |
-| Next chapter | Jeffrey Danaher Property Management becomes Black Sheep Property Management |
+| Next chapter | Jeffrey Danaher’s company becomes Black Sheep Landscaping |
 
 ### Closing CTA
 
@@ -642,7 +642,7 @@ Do not promise a response window until Jeffrey confirms one.
 
 ### Brand block
 
-> **Black Sheep Property Management**  
+> **Black Sheep Landscaping**
 > Property care for homes and businesses in Chittenden County, Vermont.
 
 ### Service links
@@ -667,7 +667,7 @@ Do not promise a response window until Jeffrey confirms one.
 
 ### Legal line
 
-> © [current year] Black Sheep Property Management. All rights reserved.
+> © [current year] Black Sheep Landscaping. All rights reserved.
 
 Do not publish a street address or email until Jeffrey provides and approves them.
 
@@ -709,7 +709,7 @@ Describe what is visibly shown and the work being performed, if known. Examples:
 - “Mulched planting beds around a commercial entrance.”
 - “Snowplow clearing a commercial parking area.”
 
-Do not use “Black Sheep Property Management image” or stuff service/location keywords into every alt attribute.
+Do not use “Black Sheep Landscaping image” or stuff service/location keywords into every alt attribute.
 
 ---
 
@@ -719,13 +719,13 @@ These are first-pass drafts. Confirm the final service area and service scope be
 
 ### Home
 
-**Title:** Black Sheep Property Management | Chittenden County, VT
+**Title:** Black Sheep Landscaping | Chittenden County, VT
 
 **Description:** Grounds, cleaning, snow removal, and specialty property care for homes and businesses across Chittenden County, Vermont.
 
 ### Services
 
-**Title:** Property Care Services | Black Sheep Property Management
+**Title:** Landscaping Services | Black Sheep Landscaping
 
 **Description:** Explore grounds, interior cleaning, winter, pool, pond, handyman, and specialty property services in Chittenden County.
 
@@ -755,13 +755,13 @@ These are first-pass drafts. Confirm the final service area and service scope be
 
 ### About
 
-**Title:** About Black Sheep Property Management | Essex, Vermont
+**Title:** About Black Sheep Landscaping | Essex, Vermont
 
 **Description:** Meet Jeffrey Danaher and the local team caring for homes and businesses across Chittenden County, Vermont.
 
 ### Contact
 
-**Title:** Request an Estimate | Black Sheep Property Management
+**Title:** Request an Estimate | Black Sheep Landscaping
 
 **Description:** Tell Black Sheep what your Chittenden County home or business needs and request a property-care estimate.
 
@@ -817,8 +817,8 @@ These are first-pass drafts. Confirm the final service area and service scope be
 
 The following claims or decisions need Jeffrey’s confirmation before launch:
 
-1. **Business name and legal status:** Is “Black Sheep Property Management” the registered business name, a DBA, or a public-facing brand?
-2. **Meaning of property management:** Does the company provide maintenance/property care only, or also leasing, tenant, rent, inspection, or financial-management services? This draft intentionally promises only maintenance and care.
+1. **Business name and legal status:** Confirm that “Black Sheep Landscaping” is the approved public-facing brand and whether it is a registered name or DBA.
+2. **Additional scope:** Confirm which cleaning, snow, specialty, and property-care services remain available under the landscaping brand. This draft intentionally makes landscaping the front door.
 3. **Service area:** Is all of Chittenden County accurate? Are any nearby counties or specific towns included or excluded?
 4. **Base location:** May the site publicly say Essex, Vermont? Is there a publishable street or mailing address?
 5. **Phone:** Confirm (802) 343-7779 as the public estimate and service number.

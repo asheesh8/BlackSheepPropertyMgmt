@@ -1,10 +1,10 @@
-# Black Sheep Property Management — Brand System
+# Black Sheep Landscaping — Brand System
 
 Version 1.0 · August 2026
 
 ## Brand idea
 
-Black Sheep Property Management does not behave like another anonymous maintenance vendor. The identity uses one animal making an intentional choice: the body stays with the property, while the head turns against the expected direction.
+Black Sheep Landscaping does not behave like another anonymous landscaping vendor. The identity centers on the one sheep—and crew—that refuses to blend into the herd.
 
 The literal sheep is the symbol. The herd is the story. Typography and real project photography carry the rest of the brand.
 
@@ -44,7 +44,7 @@ The mark is intentionally a silhouette. Do not add wool texture, facial detail, 
 
 Use the horizontal lockup by default. Use the stacked lockup only when the available area is closer to square or when a centered composition is materially stronger.
 
-The supplied lettering is outlined. Never replace it with live text, retype it in a nearby font, tighten individual letters, or change the relationship between `BLACK SHEEP` and `PROPERTY MANAGEMENT`.
+Keep the relationship between `BLACK SHEEP` and `LANDSCAPING` consistent across approved lockups. Do not distort or compress either line.
 
 ### Herd signature
 
@@ -214,7 +214,7 @@ Do not:
 - Stretch, skew, rotate, crop, or rearrange a lockup
 - Change the number or direction of animals in the herd signature
 - Add a divider between the black sheep and the herd
-- Use the old `LANDSCAPING` descriptor in place of `PROPERTY MANAGEMENT`
+- Replace the approved `LANDSCAPING` descriptor with another business category
 - Put the logo over visually noisy footage without contrast protection
 - Animate the mark simply because motion is available
 

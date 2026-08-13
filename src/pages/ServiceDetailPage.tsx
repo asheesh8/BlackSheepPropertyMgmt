@@ -13,7 +13,7 @@ export function ServiceDetailPage() {
   return (
     <main id="main-content" className="inner-page service-detail">
       <PageMeta
-        title={`${service.name} | Black Sheep Property Management`}
+        title={`${service.name} | Black Sheep Landscaping`}
         description={service.summary}
       />
       <PageHero

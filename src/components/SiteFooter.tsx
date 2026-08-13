@@ -5,8 +5,8 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="site-footer__lead">
-        <p className="eyebrow eyebrow--light">Black Sheep Property Management</p>
-        <p className="site-footer__statement">Property care for homes and businesses in Chittenden County.</p>
+        <p className="eyebrow eyebrow--light">Black Sheep Landscaping</p>
+        <p className="site-footer__statement">Lawn and landscape care for homes and businesses in Chittenden County.</p>
         <Link className="site-footer__call" href="/contact">Tell us what needs doing <span aria-hidden="true">↗</span></Link>
       </div>
 
@@ -35,7 +35,7 @@ export function SiteFooter() {
 
       <div className="site-footer__bottom">
         <img src="/brand/black-sheep-mark-reversed.svg" alt="" />
-        <p>© {new Date().getFullYear()} Black Sheep Property Management</p>
+        <p>© {new Date().getFullYear()} Black Sheep Landscaping</p>
         <p>Essex, Vermont</p>
       </div>
     </footer>

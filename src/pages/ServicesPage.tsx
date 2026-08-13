@@ -9,13 +9,13 @@ export function ServicesPage() {
   return (
     <main id="main-content" className="inner-page">
       <PageMeta
-        title="Property Care Services | Black Sheep Property Management"
-        description="Explore grounds, interior cleaning, winter, pool, pond, handyman, and specialty property services in Chittenden County."
+        title="Landscaping Services | Black Sheep Landscaping"
+        description="Explore landscaping, lawn care, seasonal cleanup, snow removal, and additional property services in Chittenden County."
       />
       <PageHero
         eyebrow="Services"
         title={<>One property.<br />A long list.</>}
-        body="Black Sheep handles recurring care, seasonal work, and the one-off jobs that keep homes and businesses clean, accessible, and well maintained."
+        body="Black Sheep leads with landscaping and lawn care, with seasonal and additional services for homes and businesses that need a dependable local crew."
       />
 
       <section className="services-intro section-pad">

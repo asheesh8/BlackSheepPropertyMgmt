@@ -4,7 +4,7 @@ import { PageMeta } from '../components/PageMeta'
 export function PrivacyPage() {
   return (
     <main id="main-content" className="inner-page">
-      <PageMeta title="Privacy | Black Sheep Property Management" description="How Black Sheep Property Management handles estimate-request information." />
+      <PageMeta title="Privacy | Black Sheep Landscaping" description="How Black Sheep Landscaping handles estimate-request information." />
       <PageHero eyebrow="Privacy" title="Plain and simple." />
       <section className="legal-copy section-pad">
         <h2>Estimate requests</h2>

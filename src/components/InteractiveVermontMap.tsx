@@ -19,7 +19,7 @@ const places: Record<PlaceId, {
     index: '01',
     label: 'Chittenden County',
     title: 'The primary place to start.',
-    description: 'Grounds, interiors, winter, and specialty care for homes and businesses across the county.',
+    description: 'Landscaping, lawn care, seasonal work, and additional services for homes and businesses across the county.',
     qualifier: 'Coverage is confirmed by address, scope, season, and schedule.',
   },
   burlington: {
