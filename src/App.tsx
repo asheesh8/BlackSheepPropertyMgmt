@@ -39,6 +39,7 @@ export default function App() {
         <Route path="/services/:serviceId" component={ServiceDetailPage} />
         <Route path="/work" component={WorkPage} />
         <Route path="/service-area" component={ServiceAreaPage} />
+        <Route path="/mission" component={AboutPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/contact" component={ContactPage} />
         <Route path="/thanks" component={ThanksPage} />

@@ -6,7 +6,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="site-footer__lead">
         <p className="eyebrow eyebrow--light">Black Sheep Landscaping</p>
-        <p className="site-footer__statement">Lawn and landscape care for homes and businesses in Chittenden County.</p>
+        <p className="site-footer__statement">Premium lawn and landscape care for homes and businesses across Northern Vermont.</p>
         <Link className="site-footer__call" href="/contact">Tell us what needs doing <span aria-hidden="true">↗</span></Link>
       </div>
 
@@ -21,7 +21,7 @@ export function SiteFooter() {
           <p className="footer-label">Company</p>
           <Link href="/work">Work</Link>
           <Link href="/service-area">Service Area</Link>
-          <Link href="/about">About</Link>
+          <Link href="/mission">Mission</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/privacy">Privacy</Link>
         </div>

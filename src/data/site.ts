@@ -112,7 +112,7 @@ export const contact = {
   phoneHref: 'tel:+18023437779',
   hours: 'Everyday, 8:00 a.m.–5:00 p.m.',
   location: 'Essex, Vermont',
-  serviceArea: 'Chittenden County',
+  serviceArea: 'Northern Vermont',
 }
 
 export const projectImages = [

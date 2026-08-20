@@ -58,7 +58,7 @@ export function CinematicHero() {
           <div className="cinematic-hero__veil" />
         </div>
 
-        <p className="cinematic-hero__location">Chittenden County, Vermont</p>
+        <p className="cinematic-hero__location">Northern Vermont</p>
 
         <div className="cinematic-hero__beat" style={{ opacity: firstOpacity }}>
           <p>Most follow the herd.</p>
@@ -69,9 +69,9 @@ export function CinematicHero() {
         </div>
 
         <div className="cinematic-hero__brand" style={{ opacity: brandOpacity }}>
-          <p className="eyebrow eyebrow--light">Landscaping · Essex, Vermont</p>
+          <p className="eyebrow eyebrow--light">Landscaping · Northern Vermont</p>
           <h1 id="hero-title">Black Sheep<br />Landscaping</h1>
-          <p>Lawns. Landscapes. Seasonal care.<br />The work that keeps them standing out.</p>
+          <p>Premium care for commercial properties and Vermont homes.<br />Thoughtful work for people and nature.</p>
           <div className="cinematic-hero__actions">
             <Link className="button button--light" href="/contact">Request an estimate</Link>
             <Link className="text-link text-link--light" href="/services">Explore our services <span aria-hidden="true">↘</span></Link>

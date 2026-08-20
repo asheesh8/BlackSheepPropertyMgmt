@@ -1569,6 +1569,12 @@ p {
   background: #ddd9cd;
 }
 
+.service-area-map__visual.reveal,
+.home-area__visual.reveal {
+  transform: none;
+  transition-property: opacity;
+}
+
 /* Interactive Vermont map */
 .interactive-map,
 .interactive-map__stage {
@@ -1578,11 +1584,10 @@ p {
 
 .interactive-map__stage {
   position: relative;
-  min-height: 100svh;
+  height: clamp(42rem, 78svh, 52rem);
   overflow: hidden;
   isolation: isolate;
-  --cursor-opacity: 0;
-  --map-scale: 1;
+  background: #dedbd1;
 }
 
 .interactive-map__terrain {
@@ -1593,8 +1598,7 @@ p {
   background-image: url("data:image/svg+xml,%3Csvg width='900' height='900' viewBox='0 0 900 900' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23708166' stroke-opacity='.45'%3E%3Cpath d='M-80 220C120 80 310 85 482 192S788 324 980 180'/%3E%3Cpath d='M-90 365C114 216 323 226 501 338S806 464 990 320'/%3E%3Cpath d='M-82 525C130 370 330 382 512 495S818 622 985 478'/%3E%3Cpath d='M-75 690C128 535 350 546 526 657S818 790 986 642'/%3E%3C/g%3E%3C/svg%3E");
   background-position: center;
   background-size: cover;
-  transform: translate3d(var(--terrain-x, 0), var(--terrain-y, 0), 0) scale(1.035);
-  transition: transform 240ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  transform: scale(1.02);
 }
 
 .interactive-map__shape {
@@ -1602,16 +1606,9 @@ p {
   z-index: 1;
   top: 50%;
   left: 62%;
-  height: min(110svh, 68vw);
+  height: min(102svh, 64vw);
   aspect-ratio: 570 / 860;
-  transform: translate3d(calc(-50% + var(--map-x, 0px)), calc(-50% + var(--map-y, 0px)), 0) scale(var(--map-scale));
-  transform-origin: 20% 26%;
-  transition: transform 180ms cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.interactive-map[data-active='burlington'] .interactive-map__shape,
-.interactive-map[data-active='essex'] .interactive-map__shape {
-  --map-scale: 1.035;
+  transform: translate(-50%, -50%);
 }
 
 .interactive-map__art {
@@ -1621,60 +1618,39 @@ p {
   height: 100%;
   max-width: none;
   user-select: none;
-  clip-path: inset(0 0 100% 0);
-  opacity: 0.25;
-  transition: clip-path 900ms cubic-bezier(0.2, 0.7, 0.2, 1), opacity 420ms ease;
+  opacity: 0.5;
+  transition: opacity 360ms ease;
 }
 
 .reveal.is-visible .interactive-map__art {
-  clip-path: inset(0);
   opacity: 1;
 }
 
-.interactive-map__cursor {
+.interactive-map__region-fill {
   position: absolute;
-  z-index: 8;
-  top: var(--cursor-y, 50%);
-  left: var(--cursor-x, 50%);
-  display: grid;
-  width: 3.1rem;
-  height: 3.1rem;
-  place-items: center;
-  opacity: var(--cursor-opacity);
-  color: var(--ink);
-  border: 1px solid rgba(17, 19, 17, 0.82);
-  border-radius: 50%;
-  background: rgba(242, 239, 231, 0.9);
+  inset: 0;
+  opacity: 0.9;
+  background: linear-gradient(
+    180deg,
+    #a8d493 0%,
+    #8fbe7c 22%,
+    #75a667 43%,
+    rgba(94, 139, 82, 0.78) 58%,
+    rgba(78, 117, 69, 0.34) 70%,
+    rgba(65, 95, 59, 0) 82%
+  );
+  clip-path: inset(0 0 14% 0);
+  -webkit-mask: url('/brand/vermont-map-only.svg') center / 100% 100% no-repeat;
+  mask: url('/brand/vermont-map-only.svg') center / 100% 100% no-repeat;
   pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: top 80ms linear, left 80ms linear, opacity 160ms ease;
+  transition: opacity 180ms ease;
 }
 
-.interactive-map__cursor::before,
-.interactive-map__cursor::after {
-  position: absolute;
-  background: rgba(17, 19, 17, 0.72);
-  content: '';
+.interactive-map[data-active='northern'] .interactive-map__region-fill {
+  opacity: 1;
 }
 
-.interactive-map__cursor::before {
-  width: 0.8rem;
-  height: 1px;
-}
-
-.interactive-map__cursor::after {
-  width: 1px;
-  height: 0.8rem;
-}
-
-.interactive-map__cursor span {
-  position: absolute;
-  top: calc(100% + 0.35rem);
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.48rem;
-  letter-spacing: 0.08em;
-}
-
+.interactive-map__region,
 .interactive-map__county,
 .interactive-map__point,
 .interactive-map__controls button {
@@ -1684,9 +1660,54 @@ p {
   cursor: pointer;
 }
 
-.interactive-map__county {
+.interactive-map__region {
   position: absolute;
   z-index: 2;
+  top: 1.5%;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  padding: 0;
+  color: var(--ink);
+  border: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.interactive-map__region span {
+  position: absolute;
+  top: 34%;
+  right: 4%;
+  padding: 0.5rem 0.65rem;
+  color: var(--ink);
+  border: 1px solid rgba(17, 19, 17, 0.42);
+  background: rgba(242, 239, 231, 0.88);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.56rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 180ms ease, background 180ms ease;
+}
+
+.interactive-map__region span small,
+.interactive-map__point span small {
+  opacity: 0.62;
+  font-size: 0.44rem;
+  letter-spacing: 0.04em;
+}
+
+.interactive-map__region.is-active span,
+.interactive-map__region:hover span,
+.interactive-map__region:focus-visible span {
+  color: var(--bone);
+  background: var(--ink);
+}
+
+.interactive-map__county {
+  position: absolute;
+  z-index: 3;
   top: 15.9%;
   left: 10.2%;
   width: 24.1%;
@@ -1701,8 +1722,7 @@ p {
   border: 1px solid rgba(242, 239, 231, 0.82);
   background: rgba(167, 193, 148, 0.07);
   content: '';
-  transform: scale(0.94);
-  transition: opacity 200ms ease, transform 260ms ease, background 200ms ease;
+  transition: opacity 180ms ease, background 180ms ease;
 }
 
 .interactive-map__county span {
@@ -1719,12 +1739,17 @@ p {
   white-space: nowrap;
 }
 
+.interactive-map__county span small {
+  color: rgba(242, 239, 231, 0.62);
+  font-size: 0.45rem;
+  letter-spacing: 0.04em;
+}
+
 .interactive-map__county.is-active::before,
 .interactive-map__county:hover::before,
 .interactive-map__county:focus-visible::before {
   opacity: 1;
   background: rgba(167, 193, 148, 0.14);
-  transform: none;
 }
 
 .interactive-map__point {
@@ -1734,11 +1759,6 @@ p {
   height: 1.4rem;
   padding: 0;
   transform: translate(-50%, -50%);
-}
-
-.interactive-map__point--burlington {
-  top: 25.7%;
-  left: 16.7%;
 }
 
 .interactive-map__point--essex {
@@ -1756,7 +1776,7 @@ p {
   border-radius: 50%;
   background: var(--bone);
   transform: translate(-50%, -50%);
-  transition: width 200ms ease, height 200ms ease, background 200ms ease, box-shadow 200ms ease;
+  transition: background 180ms ease, box-shadow 180ms ease;
 }
 
 .interactive-map__point::before {
@@ -1769,11 +1789,6 @@ p {
   content: '';
   transform: scaleX(0.35);
   transition: opacity 180ms ease, transform 220ms ease;
-}
-
-.interactive-map__point--burlington::before {
-  right: 65%;
-  transform-origin: right center;
 }
 
 .interactive-map__point--essex::before {
@@ -1793,11 +1808,6 @@ p {
   white-space: nowrap;
 }
 
-.interactive-map__point--burlington span {
-  right: calc(100% + 0.7rem);
-  transform: translateY(0.75rem);
-}
-
 .interactive-map__point--essex span {
   left: calc(100% + 0.7rem);
   transform: translateY(-1.2rem);
@@ -1806,10 +1816,8 @@ p {
 .interactive-map__point.is-active i,
 .interactive-map__point:hover i,
 .interactive-map__point:focus-visible i {
-  width: 1rem;
-  height: 1rem;
   background: #a7c194;
-  box-shadow: 0 0 0 0.45rem rgba(242, 239, 231, 0.42);
+  box-shadow: 0 0 0 0.34rem rgba(242, 239, 231, 0.44);
 }
 
 .interactive-map__point.is-active::before,
@@ -1824,34 +1832,37 @@ p {
   z-index: 5;
   bottom: 2rem;
   left: 2rem;
-  width: min(25rem, calc(100% - 4rem));
-  padding: 1.6rem;
+  width: min(27rem, calc(100% - 4rem));
+  min-height: 17.5rem;
+  padding: 1.75rem;
   color: var(--ink);
+  border-top: 0.3rem solid var(--ink);
   background: var(--bone);
 }
 
-.interactive-map__details-content {
-  animation: map-detail-in 340ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-
-@keyframes map-detail-in {
-  from {
-    opacity: 0;
-    transform: translateY(0.6rem);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
+.interactive-map__details-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.45rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(17, 19, 17, 0.2);
 }
 
 .interactive-map__meta {
-  margin-bottom: 1.2rem;
+  margin: 0;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.6rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+.interactive-map__details-head > span {
+  color: rgba(17, 19, 17, 0.55);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.56rem;
+  letter-spacing: 0.08em;
 }
 
 .interactive-map__details h3 {
@@ -1890,7 +1901,11 @@ p {
   top: 2rem;
   left: 2rem;
   display: flex;
-  border: 1px solid rgba(17, 19, 17, 0.28);
+  overflow: hidden;
+  border: 1px solid rgba(17, 19, 17, 0.32);
+  border-radius: 999px;
+  background: rgba(242, 239, 231, 0.9);
+  backdrop-filter: blur(8px);
 }
 
 .interactive-map__controls button {
@@ -1898,7 +1913,7 @@ p {
   min-height: 2.8rem;
   align-items: center;
   gap: 0.55rem;
-  padding: 0.6rem 0.75rem;
+  padding: 0.65rem 0.9rem;
   border-right: 1px solid rgba(17, 19, 17, 0.22);
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.56rem;
@@ -1938,12 +1953,12 @@ p {
 }
 
 .interactive-map--compact .interactive-map__stage {
-  min-height: clamp(34rem, 68svh, 48rem);
+  height: clamp(36rem, 52vw, 42rem);
 }
 
 .interactive-map--compact .interactive-map__shape {
-  left: 60%;
-  height: min(78svh, 58vw);
+  left: 62%;
+  height: min(74svh, 54vw);
 }
 
 .home-area .interactive-map__terrain {
@@ -1951,21 +1966,21 @@ p {
 }
 
 .home-area .interactive-map__point span {
-  color: var(--bone);
+  color: var(--ink);
 }
 
 .home-area .interactive-map__controls {
-  border-color: var(--line-light);
+  border-color: rgba(17, 19, 17, 0.32);
 }
 
 .home-area .interactive-map__controls button {
-  color: var(--bone);
-  border-color: var(--line-light);
+  color: var(--ink);
+  border-color: rgba(17, 19, 17, 0.22);
 }
 
 .home-area .interactive-map__controls button.is-active {
-  color: var(--ink);
-  background: var(--bone);
+  color: var(--bone);
+  background: var(--ink);
 }
 
 .service-area-ledger {
@@ -2886,11 +2901,11 @@ p {
   }
 
   .service-area-map__visual {
-    min-height: 92svh;
+    min-height: 0;
   }
 
   .service-area-map__visual .interactive-map__stage {
-    min-height: 92svh;
+    height: clamp(42rem, 78svh, 52rem);
   }
 
   .home-area {
@@ -2902,12 +2917,6 @@ p {
   .home-area .season-index__intro {
     padding-right: var(--page-pad);
     padding-left: var(--page-pad);
-  }
-
-  .interactive-map__shape,
-  .interactive-map--compact .interactive-map__shape {
-    left: 59%;
-    height: min(96svh, 82vw);
   }
 
   .service-area-ledger__copy {
@@ -3333,39 +3342,40 @@ p {
   }
 
   .service-area-map__visual {
-    min-height: 88svh;
+    min-height: 0;
     padding: 0;
   }
 
-  .service-area-map__visual .interactive-map__stage {
-    min-height: 88svh;
-  }
-
+  .interactive-map__stage,
+  .service-area-map__visual .interactive-map__stage,
   .interactive-map--compact .interactive-map__stage {
-    min-height: 72svh;
+    display: grid;
+    height: auto;
+    min-height: 0;
+    grid-template-rows: auto 24rem auto auto;
+    gap: 1rem;
+    padding: 1rem;
   }
 
   .interactive-map__shape,
   .interactive-map--compact .interactive-map__shape {
-    top: 43%;
-    left: 59%;
-    height: min(76svh, 132vw);
-  }
-
-  .interactive-map--compact .interactive-map__shape {
-    top: 47%;
-    height: min(68svh, 126vw);
-  }
-
-  .interactive-map__cursor {
-    display: none;
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-row: 2;
+    height: 24rem;
+    margin: 0 auto;
+    transform: none;
   }
 
   .interactive-map__details {
-    right: 1rem;
-    bottom: 4.35rem;
-    left: 1rem;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    grid-row: 3;
     width: auto;
+    min-height: 0;
     padding: 1.2rem;
   }
 
@@ -3383,18 +3393,21 @@ p {
   }
 
   .interactive-map__controls {
-    top: 1rem;
-    right: 1rem;
-    left: 1rem;
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
     display: grid;
+    grid-row: 1;
     grid-template-columns: repeat(3, 1fr);
+    border-radius: 0;
   }
 
   .interactive-map__controls button {
     min-width: 0;
     justify-content: center;
-    padding: 0.55rem 0.35rem;
-    font-size: 0.48rem;
+    padding: 0.65rem 0.3rem;
+    font-size: 0.54rem;
   }
 
   .interactive-map__controls button span {
@@ -3402,8 +3415,11 @@ p {
   }
 
   .interactive-map__cta {
-    right: 1rem;
-    bottom: 1rem;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    grid-row: 4;
+    justify-self: start;
   }
 
   .interactive-map__county span {
@@ -3415,12 +3431,13 @@ p {
     font-size: 0.45rem;
   }
 
-  .interactive-map__point--burlington span {
-    right: calc(100% + 0.45rem);
-  }
-
   .interactive-map__point--essex span {
     left: calc(100% + 0.45rem);
+  }
+
+  .interactive-map__region span {
+    right: 1%;
+    font-size: 0.45rem;
   }
 
   .service-area-ledger__media {
@@ -3517,12 +3534,6 @@ p {
   }
 }
 
-@media (pointer: coarse) {
-  .interactive-map__cursor {
-    display: none;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -3547,17 +3558,7 @@ p {
   }
 
   .interactive-map__art {
-    clip-path: inset(0);
     opacity: 1;
-  }
-
-  .interactive-map__cursor {
-    display: none;
-  }
-
-  .interactive-map[data-active='burlington'] .interactive-map__shape,
-  .interactive-map[data-active='essex'] .interactive-map__shape {
-    --map-scale: 1;
   }
 
   .home-proof .about-slice__media:hover > .reveal img,

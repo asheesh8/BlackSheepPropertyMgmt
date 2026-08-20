@@ -42,7 +42,7 @@ const options: ChatOption[] = [
   },
   {
     label: 'Where do you work?',
-    response: 'Essex is home base, with Chittenden County and greater Burlington as the best places to start.',
+    response: 'Essex is home base, and Black Sheep considers commercial and residential work across Northern Vermont. Share the address and scope so we can confirm the fit.',
     action: { label: 'Open the service map', href: '/service-area' },
   },
 ]
@@ -111,7 +111,7 @@ export function PropertyChat() {
 
     addExchange(
       visitorText,
-      'That sounds like something Jeffrey should look at. This preview can’t send messages yet, so the estimate form is the safest next step.',
+      'That sounds like something the Black Sheep team should look at. This preview can’t send messages yet, so the estimate form is the safest next step.',
       { label: 'Tell us what needs doing', href: '/contact' },
     )
     setInput('')

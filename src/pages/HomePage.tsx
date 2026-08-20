@@ -10,8 +10,8 @@ export function HomePage() {
   return (
     <main id="main-content">
       <PageMeta
-        title="Black Sheep Landscaping | Chittenden County, VT"
-        description="Lawn care, landscaping, seasonal cleanup, snow removal, and year-round outdoor care across Chittenden County, Vermont."
+        title="Black Sheep Landscaping | Northern Vermont"
+        description="Premium, environmentally thoughtful landscaping and year-round outdoor care for commercial properties and homes across Northern Vermont."
       />
       <CinematicHero />
 
@@ -61,7 +61,7 @@ export function HomePage() {
           <Reveal><p className="eyebrow">Selected work</p></Reveal>
           <Reveal delay={80}><h2>The work,<br />up close.</h2></Reveal>
           <Reveal delay={140}>
-            <p>A closer look at the lawns, landscapes, seasonal work, and additional care handled by Jeffrey’s team.</p>
+            <p>A closer look at the lawns, landscapes, seasonal work, and property care handled by Black Sheep.</p>
             <ArrowLink to="/work">See selected work</ArrowLink>
           </Reveal>
         </div>
@@ -69,8 +69,9 @@ export function HomePage() {
 
       <section className="season-index home-area section-pad section-green">
         <Reveal className="season-index__intro">
-          <p className="eyebrow eyebrow--light">Close to the work</p>
+          <p className="eyebrow eyebrow--light">Across the north</p>
           <h2>Made for a Vermont year.</h2>
+          <p>Essex is home base. Northern Vermont is the region. Every property is considered on its own.</p>
         </Reveal>
         <Reveal className="home-area__visual" delay={120}>
           <InteractiveVermontMap compact />
@@ -82,7 +83,7 @@ export function HomePage() {
           <img src="/brand/black-sheep-herd-signature-reversed.svg" alt="" />
         </div>
         <Reveal>
-          <p className="eyebrow eyebrow--light">Every Vermont season</p>
+          <p className="eyebrow eyebrow--light">Commercial & residential</p>
           <h2>Tell us what the<br />landscape needs.</h2>
         </Reveal>
         <Reveal className="closing-cta__details" delay={120}>

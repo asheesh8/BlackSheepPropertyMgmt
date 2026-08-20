@@ -5,7 +5,7 @@ const links = [
   { to: '/services', label: 'Services' },
   { to: '/work', label: 'Work' },
   { to: '/service-area', label: 'Service Area' },
-  { to: '/about', label: 'About' },
+  { to: '/mission', label: 'Mission' },
   { to: '/contact', label: 'Contact' },
 ]
 

@@ -1,6 +1,6 @@
 # Black Sheep Landscaping
 
-Complete rebrand and responsive marketing site for Jeffrey Danaher's Chittenden County landscaping company.
+Complete rebrand and responsive marketing site for Black Sheep Landscaping, serving commercial and residential clients across Northern Vermont.
 
 ## What is included
 

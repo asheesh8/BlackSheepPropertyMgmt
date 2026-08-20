@@ -10,7 +10,7 @@ export function ContactPage() {
     <main id="main-content" className="inner-page contact-page">
       <PageMeta
         title="Request an Estimate | Black Sheep Landscaping"
-        description="Tell Black Sheep what your Chittenden County lawn or landscape needs and request an estimate."
+        description="Tell Black Sheep what your Northern Vermont commercial property or home landscape needs and request an estimate."
       />
       <section className="contact-hero section-pad">
         <div>

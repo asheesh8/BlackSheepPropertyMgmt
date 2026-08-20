@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react'
+import { useState } from 'react'
 import { Link } from 'wouter'
-import { useReducedMotion } from '../hooks/useReducedMotion'
 
-type PlaceId = 'chittenden' | 'burlington' | 'essex'
+type PlaceId = 'northern' | 'essex' | 'chittenden'
 
 type InteractiveVermontMapProps = {
   compact?: boolean
@@ -15,118 +14,62 @@ const places: Record<PlaceId, {
   description: string
   qualifier: string
 }> = {
-  chittenden: {
+  northern: {
     index: '01',
-    label: 'Chittenden County',
-    title: 'The primary place to start.',
-    description: 'Landscaping, lawn care, seasonal work, and additional services for homes and businesses across the county.',
-    qualifier: 'Coverage is confirmed by address, scope, season, and schedule.',
-  },
-  burlington: {
-    index: '02',
-    label: 'Burlington',
-    title: 'A familiar point in the county.',
-    description: 'Burlington helps orient the map. Every property is still evaluated individually.',
-    qualifier: 'The marker is a reference point, not a blanket citywide promise.',
+    label: 'Northern Vermont',
+    title: 'The region, not a county line.',
+    description: 'Black Sheep considers commercial grounds programs and residential landscape work across Northern Vermont.',
+    qualifier: 'Every address is confirmed by service, scope, season, and schedule.',
   },
   essex: {
-    index: '03',
+    index: '02',
     label: 'Essex',
-    title: 'Black Sheep’s home base.',
-    description: 'This is where the team is based—and where conversations about the next property begin.',
-    qualifier: 'Fit and availability depend on the work requested.',
+    title: 'Home base. Not the boundary.',
+    description: 'The team starts in Essex and builds the right route around the properties and work in front of it.',
+    qualifier: 'A larger recurring program may have a different practical range than a one-time residential project.',
+  },
+  chittenden: {
+    index: '03',
+    label: 'Chittenden County',
+    title: 'Part of the route. Not the limit.',
+    description: 'Chittenden remains an important part of the service footprint, but Black Sheep’s work is not confined to the county.',
+    qualifier: 'The county is a geographic reference—not a coverage promise or boundary.',
   },
 }
 
 export function InteractiveVermontMap({ compact = false }: InteractiveVermontMapProps) {
-  const [activeId, setActiveId] = useState<PlaceId>('chittenden')
-  const stageRef = useRef<HTMLDivElement>(null)
-  const frameRef = useRef(0)
-  const reducedMotion = useReducedMotion()
+  const [activeId, setActiveId] = useState<PlaceId>('northern')
   const active = places[activeId]
 
   const activate = (place: PlaceId) => setActiveId(place)
-
-  useEffect(() => () => {
-    if (frameRef.current) window.cancelAnimationFrame(frameRef.current)
-  }, [])
-
-  useEffect(() => {
-    if (!reducedMotion) return
-    const stage = stageRef.current
-    if (!stage) return
-    if (frameRef.current) {
-      window.cancelAnimationFrame(frameRef.current)
-      frameRef.current = 0
-    }
-    stage.style.setProperty('--map-x', '0px')
-    stage.style.setProperty('--map-y', '0px')
-    stage.style.setProperty('--terrain-x', '0px')
-    stage.style.setProperty('--terrain-y', '0px')
-    stage.style.setProperty('--cursor-opacity', '0')
-  }, [reducedMotion])
-
-  const handlePointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
-    if (reducedMotion || event.pointerType !== 'mouse') return
-
-    const stage = event.currentTarget
-    const rect = stage.getBoundingClientRect()
-    const x = event.clientX - rect.left
-    const y = event.clientY - rect.top
-    const normalizedX = x / Math.max(1, rect.width) - 0.5
-    const normalizedY = y / Math.max(1, rect.height) - 0.5
-
-    if (frameRef.current) window.cancelAnimationFrame(frameRef.current)
-    frameRef.current = window.requestAnimationFrame(() => {
-      stage.style.setProperty('--map-x', `${normalizedX * 22}px`)
-      stage.style.setProperty('--map-y', `${normalizedY * 16}px`)
-      stage.style.setProperty('--terrain-x', `${normalizedX * -9}px`)
-      stage.style.setProperty('--terrain-y', `${normalizedY * -7}px`)
-      stage.style.setProperty('--cursor-x', `${x}px`)
-      stage.style.setProperty('--cursor-y', `${y}px`)
-      stage.style.setProperty('--cursor-opacity', '1')
-      frameRef.current = 0
-    })
-  }
-
-  const handlePointerLeave = () => {
-    const stage = stageRef.current
-    if (!stage) return
-    if (frameRef.current) {
-      window.cancelAnimationFrame(frameRef.current)
-      frameRef.current = 0
-    }
-    stage.style.setProperty('--map-x', '0px')
-    stage.style.setProperty('--map-y', '0px')
-    stage.style.setProperty('--terrain-x', '0px')
-    stage.style.setProperty('--terrain-y', '0px')
-    stage.style.setProperty('--cursor-opacity', '0')
-  }
 
   return (
     <div
       className={`interactive-map ${compact ? 'interactive-map--compact' : ''}`}
       data-active={activeId}
     >
-      <div
-        ref={stageRef}
-        className="interactive-map__stage"
-        onPointerMove={handlePointerMove}
-        onPointerLeave={handlePointerLeave}
-      >
+      <div className="interactive-map__stage">
         <div className="interactive-map__terrain" aria-hidden="true" />
-
-        <span className="interactive-map__cursor" aria-hidden="true">
-          <span>{active.index}</span>
-        </span>
 
         <div className="interactive-map__shape">
           <img
             className="interactive-map__art"
             src="/brand/vermont-map-only.svg"
-            alt="Vermont county map with Chittenden County highlighted."
+            alt="Map of Vermont showing Northern Vermont, Essex, and Chittenden County as service-area references."
             draggable="false"
           />
+
+          <div className="interactive-map__region-fill" aria-hidden="true" />
+
+          <button
+            className={`interactive-map__region ${activeId === 'northern' ? 'is-active' : ''}`}
+            type="button"
+            aria-pressed={activeId === 'northern'}
+            onClick={() => activate('northern')}
+            onFocus={() => activate('northern')}
+          >
+            <span>Northern Vermont<br /><small>primary region</small></span>
+          </button>
 
           <button
             className={`interactive-map__county ${activeId === 'chittenden' ? 'is-active' : ''}`}
@@ -134,21 +77,8 @@ export function InteractiveVermontMap({ compact = false }: InteractiveVermontMap
             aria-pressed={activeId === 'chittenden'}
             onClick={() => activate('chittenden')}
             onFocus={() => activate('chittenden')}
-            onPointerEnter={() => activate('chittenden')}
           >
-            <span>Chittenden</span>
-          </button>
-
-          <button
-            className={`interactive-map__point interactive-map__point--burlington ${activeId === 'burlington' ? 'is-active' : ''}`}
-            type="button"
-            aria-pressed={activeId === 'burlington'}
-            onClick={() => activate('burlington')}
-            onFocus={() => activate('burlington')}
-            onPointerEnter={() => activate('burlington')}
-          >
-            <i aria-hidden="true" />
-            <span>Burlington</span>
+            <span>Chittenden<br /><small>part of the route</small></span>
           </button>
 
           <button
@@ -157,20 +87,22 @@ export function InteractiveVermontMap({ compact = false }: InteractiveVermontMap
             aria-pressed={activeId === 'essex'}
             onClick={() => activate('essex')}
             onFocus={() => activate('essex')}
-            onPointerEnter={() => activate('essex')}
           >
             <i aria-hidden="true" />
-            <span>Essex</span>
+            <span>Essex<br /><small>home base</small></span>
           </button>
         </div>
 
         <div className="interactive-map__details" aria-live="polite">
-          <div key={activeId} className="interactive-map__details-content">
-            <p className="interactive-map__meta">{active.index} / {active.label}</p>
+          <div className="interactive-map__details-content">
+            <div className="interactive-map__details-head">
+              <p className="interactive-map__meta">{active.label}</p>
+              <span>{active.index} / 03</span>
+            </div>
             <h3>{active.title}</h3>
             <p>{active.description}</p>
             <small>{active.qualifier}</small>
-            {compact ? <Link href="/service-area">Open the full map <span aria-hidden="true">↗</span></Link> : null}
+            {compact ? <Link href="/service-area">Explore the service area <span aria-hidden="true">↗</span></Link> : null}
           </div>
         </div>
 

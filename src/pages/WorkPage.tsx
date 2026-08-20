@@ -8,12 +8,12 @@ export function WorkPage() {
     <main id="main-content" className="inner-page">
       <PageMeta
         title="Selected Work | Black Sheep Landscaping"
-        description="A closer look at lawn, landscape, seasonal, and additional property work across Chittenden County."
+        description="A closer look at commercial and residential lawn, landscape, seasonal, and additional property work across Northern Vermont."
       />
       <PageHero
         eyebrow="Selected work"
         title={<>Proof lives<br />in the details.</>}
-        body="A closer look at the lawns, landscapes, seasonal work, and additional care handled by Jeffrey’s team."
+        body="A closer look at the lawns, landscapes, seasonal work, and additional care handled by Black Sheep."
       />
       <section className="work-page section-pad">
         <WorkGrid filterable />

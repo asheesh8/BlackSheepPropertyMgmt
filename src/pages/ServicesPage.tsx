@@ -10,7 +10,7 @@ export function ServicesPage() {
     <main id="main-content" className="inner-page">
       <PageMeta
         title="Landscaping Services | Black Sheep Landscaping"
-        description="Explore landscaping, lawn care, seasonal cleanup, snow removal, and additional property services in Chittenden County."
+        description="Explore premium commercial and residential landscaping, lawn care, seasonal cleanup, snow removal, and additional property services across Northern Vermont."
       />
       <PageHero
         eyebrow="Services"

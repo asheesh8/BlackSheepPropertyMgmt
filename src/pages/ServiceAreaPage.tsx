@@ -7,8 +7,8 @@ import { ServiceAreaConfirmation } from '../components/ServiceAreaConfirmation'
 
 const areaReferences = [
   { label: 'Home base', value: 'Essex, Vermont' },
-  { label: 'Best place to start', value: 'Chittenden County' },
-  { label: 'Regional reference', value: 'Greater Burlington' },
+  { label: 'Service region', value: 'Northern Vermont' },
+  { label: 'Property types', value: 'Commercial & residential' },
 ]
 
 const confirmationSteps = [
@@ -34,20 +34,20 @@ export function ServiceAreaPage() {
     <main id="main-content" className="inner-page service-area-page">
       <PageMeta
         title="Service Area | Black Sheep Landscaping"
-        description="Confirm landscaping availability from Black Sheep's Essex base across Chittenden County and the greater Burlington area."
+        description="Ask about commercial and residential landscaping availability across Northern Vermont from Black Sheep's Essex home base."
       />
       <PageHero
         eyebrow="Service area"
-        title={<>Close enough<br />to care.</>}
-        body="Black Sheep is based in Essex. Chittenden County and the greater Burlington area are the right places to start—not a promise that every address, service, or schedule is automatically available."
+        title={<>Northern Vermont.<br />Property by property.</>}
+        body="Black Sheep is based in Essex and serves commercial and residential properties across Northern Vermont. Availability depends on the location, scope, season, and schedule—send the address and we’ll give you a direct answer."
       />
 
       <section className="service-area-map section-pad" aria-labelledby="service-area-map-title">
         <Reveal className="service-area-map__copy">
-          <p className="eyebrow">Northwestern Vermont</p>
-          <h2 id="service-area-map-title">Essex is home base.</h2>
-          <p>From there, the team evaluates work across Chittenden County and around greater Burlington property by property.</p>
-          <p>Some jobs make sense a little farther out. Some schedules are already spoken for. Send the address and the work—we will confirm rather than make you guess.</p>
+          <p className="eyebrow">Regional reach</p>
+          <h2 id="service-area-map-title">Built for Northern Vermont.</h2>
+          <p>Our work reaches beyond one county line. We consider the property, the service, and what it takes to deliver the standard Black Sheep is known for.</p>
+          <p>Larger commercial programs, recurring routes, and the right residential projects may each have a different practical range. Tell us where the property is and what it needs.</p>
         </Reveal>
 
         <Reveal className="service-area-map__visual" delay={120}>
@@ -67,7 +67,7 @@ export function ServiceAreaPage() {
         <Reveal className="service-area-ledger__copy">
           <p className="eyebrow">No vague radius</p>
           <h2 id="service-area-ledger-title">The property comes first.</h2>
-          <p>Black Sheep handles homes and businesses, recurring lawn and landscape care, seasonal work, and select one-off jobs. The practical service area changes with the job, so the address is part of every useful estimate.</p>
+          <p>Black Sheep handles commercial properties and individual homes, recurring lawn and landscape care, seasonal work, and select one-off jobs. The practical service area changes with the job, so the address is part of every useful estimate.</p>
           <dl>
             {areaReferences.map((item) => (
               <div key={item.label}>
@@ -94,7 +94,7 @@ export function ServiceAreaPage() {
             alt="Fresh mower stripes running across a large green lawn."
             loading="lazy"
           />
-          <figcaption>Lawn care across the county</figcaption>
+          <figcaption>Lawn care across Northern Vermont</figcaption>
         </figure>
       </section>
 
