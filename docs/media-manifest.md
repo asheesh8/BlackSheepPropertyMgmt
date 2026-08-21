@@ -34,7 +34,7 @@ Prepared from 20 owner-supplied photos, 17 usable image assets on the legacy Dan
 | `public/media/projects/gallery-09.webp` | Grounds / installation | 1600×1200, 720 KB | Crew completing a large fresh-mulch installation | [Legacy-site asset](https://storage.googleapis.com/msgsndr/DwIuEg3GCYh7SQ47zhB1/media/67a532f640d8d34c355dd227.jpeg) |
 | `public/media/projects/gallery-10.webp` | Grounds / planting | 1200×1600, 671 KB | Newly planted commercial bed with fresh mulch | [Legacy-site asset](https://storage.googleapis.com/msgsndr/DwIuEg3GCYh7SQ47zhB1/media/67a533173553cd227fa74db7.jpeg) |
 | `public/media/projects/gallery-11.webp` | Grounds / commercial | 1200×1600, 548 KB | Long commercial walkway with newly mulched border | [Legacy-site asset](https://storage.googleapis.com/msgsndr/DwIuEg3GCYh7SQ47zhB1/media/67a79f049769a76f1a5e24c8.jpeg) |
-| `public/media/projects/gallery-12.webp` | Grounds / seasonal color | 1200×1600, 510 KB | Curved commercial flower bed surrounding a young tree | [Legacy-site asset](https://storage.googleapis.com/msgsndr/DwIuEg3GCYh7SQ47zhB1/media/67a79f6d232902bb4f3d7b03.jpeg) |
+| `public/media/projects/gallery-12-clean.png` | Grounds / seasonal color | 1086×1448, edited website asset | Curved commercial flower bed surrounding a young tree; identifying canopy wording removed | Derived from the owner-supplied gallery photograph for client-approved site use |
 
 ## Processing notes
 

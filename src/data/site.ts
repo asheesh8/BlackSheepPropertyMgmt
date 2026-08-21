@@ -129,5 +129,5 @@ export const projectImages = [
   { src: '/media/projects/gallery-08.webp', category: 'grounds', alt: 'Stone-edged flower bed beside a walkway.' },
   { src: '/media/projects/gallery-10.webp', category: 'grounds', alt: 'Newly planted commercial bed with fresh mulch.' },
   { src: '/media/projects/gallery-11.webp', category: 'grounds', alt: 'Long commercial walkway with newly mulched border.' },
-  { src: '/media/projects/gallery-12.webp', category: 'grounds', alt: 'Curved commercial flower bed surrounding a young tree.' },
+  { src: '/media/projects/gallery-12-clean.png', category: 'grounds', alt: 'Curved commercial flower bed surrounding a young tree.' },
 ]
