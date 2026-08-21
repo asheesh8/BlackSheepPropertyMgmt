@@ -17,7 +17,6 @@ Prepared from 20 owner-supplied photos, 17 usable image assets on the legacy Dan
 | `public/media/projects/grounds-detail.webp` | Grounds | 1350×1800, 807 KB | Fresh commercial flower bed with ornamental grasses and dark mulch | `/Users/ashishsubedi/Library/Messages/Attachments/ee/14/7B477046-56AA-4DCB-B70B-896D12C84B76/IMG_2058.heic` |
 | `public/media/projects/interiors-primary.webp` | Interiors | 1800×1350, 477 KB | Clean modern commercial office with open workstations | [Legacy-site asset](https://assets.cdn.filesafe.space/DwIuEg3GCYh7SQ47zhB1/media/67cb6002456f013e003db77d.jpeg) |
 | `public/media/projects/interiors-detail.webp` | Interiors | 1800×1350, 290 KB | Maintained commercial office and reception workspace | [Legacy-site asset](https://assets.cdn.filesafe.space/DwIuEg3GCYh7SQ47zhB1/media/67cb663888e6200d0420ab57.jpeg) |
-| `public/media/projects/winter-primary.webp` | Winter | 1350×1800, 811 KB | Red plow truck clearing a snowy commercial lot | [Legacy-site asset](https://assets.cdn.filesafe.space/DwIuEg3GCYh7SQ47zhB1/media/67a68728fc76857202104322.jpeg) |
 | `public/media/projects/specialty-primary.webp` | Specialty | 1350×1800, 536 KB | Maintained indoor lap pool and surrounding deck | [Legacy-site asset](https://assets.cdn.filesafe.space/DwIuEg3GCYh7SQ47zhB1/media/67cb6a04456f0181073dc265.jpeg) |
 
 ## Project gallery
@@ -25,7 +24,7 @@ Prepared from 20 owner-supplied photos, 17 usable image assets on the legacy Dan
 | File | Category | Specs | Content | Source |
 | --- | --- | --- | --- | --- |
 | `public/media/projects/gallery-01.webp` | Grounds / planting | 1200×1600, 392 KB | Mulched perennial bed alongside a commercial walkway | `/Users/ashishsubedi/Library/Messages/Attachments/fd/13/18A7AD5B-C2AC-493C-9895-3FE0E7CF0802/IMG_1268.JPG` |
-| `public/media/projects/gallery-02.webp` | Grounds / commercial | 1317×1600, 360 KB | Commercial entrance framed by colorful flower beds | `/Users/ashishsubedi/Library/Messages/Attachments/8a/10/F469FDB6-3D75-4211-B745-6F686237D712/IMG_1323.jpeg` |
+| `public/media/projects/gallery-02-clean.png` | Grounds / commercial | Edited website asset | Commercial entrance and flower beds; identifying canopy wording removed | Derived from `gallery-02.webp` for client-approved site use |
 | `public/media/projects/gallery-03.webp` | Grounds / mowing | 1200×1600, 799 KB | Long, clean mower stripes across a residential lawn | `/Users/ashishsubedi/Library/Messages/Attachments/63/03/F57CD8D7-C10E-4A5E-A1D0-0F35D4F6A635/IMG_1957.heic` |
 | `public/media/projects/gallery-04.webp` | Grounds / mowing | 1200×1600, 871 KB | Wide striped lawn after mowing | `/Users/ashishsubedi/Library/Messages/Attachments/c5/05/87B6CEFC-34C8-48E0-8984-BD5BED4ACCAC/IMG_1959.heic` |
 | `public/media/projects/gallery-05.webp` | Grounds / seasonal color | 1200×1600, 410 KB | Planted whiskey-barrel container with summer flowers | `/Users/ashishsubedi/Library/Messages/Attachments/ff/15/90E9CF37-9576-422E-BB63-AE416B3C44F1/IMG_0413.heic` |

@@ -30,10 +30,12 @@ export function ServicesPage() {
 
       <section className="service-panels">
         {services.map((service, index) => (
-          <article className="service-panel" key={service.id}>
-            <div className="service-panel__media">
-              <img src={service.primaryImage} alt={service.alt} loading={index > 0 ? 'lazy' : 'eager'} />
-            </div>
+          <article className={`service-panel ${service.primaryImage ? '' : 'service-panel--no-media'}`} key={service.id}>
+            {service.primaryImage ? (
+              <div className="service-panel__media">
+                <img src={service.primaryImage} alt={service.alt} loading={index > 0 ? 'lazy' : 'eager'} />
+              </div>
+            ) : null}
             <div className="service-panel__copy">
               <span>{service.index}</span>
               <p className="eyebrow">{service.name}</p>

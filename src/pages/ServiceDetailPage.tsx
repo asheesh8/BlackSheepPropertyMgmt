@@ -43,9 +43,11 @@ export function ServiceDetailPage() {
         </div>
       </section>
 
-      <section className="service-detail__image section-pad">
-        <img src={service.detailImage} alt={service.alt} loading="lazy" />
-      </section>
+      {service.detailImage ? (
+        <section className="service-detail__image section-pad">
+          <img src={service.detailImage} alt={service.alt} loading="lazy" />
+        </section>
+      ) : null}
 
       <section className="simple-cta section-pad section-green">
         <p className="eyebrow eyebrow--light">Start here</p>

@@ -78,9 +78,9 @@ export const services: Service[] = [
       'Driveways, walkways, and parking areas',
       'Roof shoveling',
     ],
-    primaryImage: '/media/projects/winter-primary.webp',
-    detailImage: '/media/projects/winter-primary.webp',
-    alt: 'Snowplow ready to clear a commercial property.',
+    primaryImage: '',
+    detailImage: '',
+    alt: '',
     cta: 'Ask about winter service',
   },
   {
@@ -118,8 +118,7 @@ export const contact = {
 export const projectImages = [
   { src: '/media/projects/gallery-03.webp', category: 'grounds', alt: 'Long, clean mower stripes across a residential lawn.' },
   { src: '/media/projects/interiors-primary.webp', category: 'interiors', alt: 'Clean modern commercial office with open workstations.' },
-  { src: '/media/projects/gallery-02.webp', category: 'grounds', alt: 'Commercial entrance framed by colorful flower beds.' },
-  { src: '/media/projects/winter-primary.webp', category: 'winter', alt: 'Red plow truck clearing a snowy commercial lot.' },
+  { src: '/media/projects/gallery-02-clean.png', category: 'grounds', alt: 'Commercial entrance framed by colorful flower beds.' },
   { src: '/media/projects/specialty-primary.webp', category: 'specialty-care', alt: 'Maintained indoor lap pool and surrounding deck.' },
   { src: '/media/projects/gallery-09.webp', category: 'grounds', alt: 'Crew completing a large fresh-mulch installation.' },
   { src: '/media/projects/interiors-detail.webp', category: 'interiors', alt: 'Maintained commercial office and reception workspace.' },

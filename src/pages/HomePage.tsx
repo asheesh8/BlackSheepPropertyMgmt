@@ -36,9 +36,6 @@ export function HomePage() {
                   <h3>{service.name}</h3>
                   <p>{service.summary}</p>
                 </div>
-                <div className="service-row__image" aria-hidden="true">
-                  <img src={service.primaryImage} alt="" loading="lazy" />
-                </div>
                 <span className="service-row__arrow" aria-hidden="true">↗</span>
               </Link>
             </Reveal>
@@ -50,7 +47,7 @@ export function HomePage() {
         <div className="about-slice__media">
           <Reveal>
             <img
-              src="/media/projects/gallery-02.webp"
+              src="/media/projects/gallery-02-clean.png"
               alt="Commercial entrance framed by maintained flower beds."
               loading="lazy"
             />
