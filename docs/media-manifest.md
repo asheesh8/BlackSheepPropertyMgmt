@@ -1,6 +1,6 @@
 # Black Sheep media manifest
 
-Prepared from 20 owner-supplied photos, 17 usable image assets on the legacy Danaher Property Management site, the supplied Firefly video, and `blacksheepbackground.png`. Originals were not modified.
+Prepared from 26 owner-supplied photos, 17 usable image assets on the legacy Danaher Property Management site, the supplied Firefly video, and `blacksheepbackground.png`.
 
 ## Hero
 
@@ -17,6 +17,8 @@ Prepared from 20 owner-supplied photos, 17 usable image assets on the legacy Dan
 | `public/media/projects/grounds-detail.webp` | Grounds | 1350×1800, 807 KB | Fresh commercial flower bed with ornamental grasses and dark mulch | `/Users/ashishsubedi/Library/Messages/Attachments/ee/14/7B477046-56AA-4DCB-B70B-896D12C84B76/IMG_2058.heic` |
 | `public/media/projects/interiors-primary.webp` | Interiors | 1800×1350, 477 KB | Clean modern commercial office with open workstations | [Legacy-site asset](https://assets.cdn.filesafe.space/DwIuEg3GCYh7SQ47zhB1/media/67cb6002456f013e003db77d.jpeg) |
 | `public/media/projects/interiors-detail.webp` | Interiors | 1800×1350, 290 KB | Maintained commercial office and reception workspace | [Legacy-site asset](https://assets.cdn.filesafe.space/DwIuEg3GCYh7SQ47zhB1/media/67cb663888e6200d0420ab57.jpeg) |
+| `public/media/projects/winter-primary.jpg` | Winter | 1163×694, 343 KB | Snowplow clearing a winding road during snowfall | `/Users/ashishsubedi/Library/Messages/Attachments/ae/14/6C104316-0D02-43A9-AFA3-C1484493D2B0/IMG_6509.png` |
+| `public/media/projects/winter-detail.jpg` | Winter | 1142×821, 233 KB | Snowplow pushing snow during a nighttime storm | `/Users/ashishsubedi/Library/Messages/Attachments/3d/13/AEF7E2AA-FD08-4CED-9CFB-E326C6A70684/IMG_4005.png` |
 | `public/media/projects/specialty-primary.webp` | Specialty | 1350×1800, 536 KB | Maintained indoor lap pool and surrounding deck | [Legacy-site asset](https://assets.cdn.filesafe.space/DwIuEg3GCYh7SQ47zhB1/media/67cb6a04456f0181073dc265.jpeg) |
 
 ## Project gallery
@@ -35,17 +37,21 @@ Prepared from 20 owner-supplied photos, 17 usable image assets on the legacy Dan
 | `public/media/projects/gallery-10.webp` | Grounds / planting | 1200×1600, 671 KB | Newly planted commercial bed with fresh mulch | [Legacy-site asset](https://storage.googleapis.com/msgsndr/DwIuEg3GCYh7SQ47zhB1/media/67a533173553cd227fa74db7.jpeg) |
 | `public/media/projects/gallery-11.webp` | Grounds / commercial | 1200×1600, 548 KB | Long commercial walkway with newly mulched border | [Legacy-site asset](https://storage.googleapis.com/msgsndr/DwIuEg3GCYh7SQ47zhB1/media/67a79f049769a76f1a5e24c8.jpeg) |
 | `public/media/projects/gallery-12-clean.png` | Grounds / seasonal color | 1086×1448, edited website asset | Curved commercial flower bed surrounding a young tree; identifying canopy wording removed | Derived from the owner-supplied gallery photograph for client-approved site use |
+| `public/media/projects/winter-gallery-01.jpg` | Winter / equipment | 1600×1200, 618 KB | Front-mounted yellow snowplow after snowfall | `/Users/ashishsubedi/Library/Messages/Attachments/fe/14/21A5B1CC-E763-430A-A6EF-CB59907E4B70/IMG_7697.heic` |
+| `public/media/projects/winter-gallery-02.jpg` | Winter / active service | 1148×759, 411 KB | Snow-removal truck during heavy nighttime snowfall | `/Users/ashishsubedi/Library/Messages/Attachments/67/07/1032E21A-34B4-40DA-B363-BA92EBC40E56/IMG_7522.png` |
+| `public/media/projects/winter-gallery-03.jpg` | Winter / equipment | 1044×1740, 315 KB | Rear salt spreader applying material to a roadway | `/Users/ashishsubedi/Library/Messages/Attachments/2f/15/783E2E2F-B4B7-40CF-9EAE-C5172DF5165D/IMG_4033.png` |
+| `public/media/projects/winter-gallery-04.jpg` | Winter / conditions | 1600×1200, 502 KB | Snow-covered intersection during an active nighttime storm | `/Users/ashishsubedi/Library/Messages/Attachments/54/04/441FFE71-D92C-4C3B-AB83-0D2077E724D4/IMG_9673.jpeg` |
 
 ## Processing notes
 
-- Preserved each selected photo's natural aspect ratio; no content-aware or generative edits were applied.
-- Normalized EXIF/HEIC rotation, converted color to sRGB when an embedded profile was present, stripped private metadata, and exported high-quality WebP derivatives.
+- Preserved each selected photo's natural aspect ratio. The new Winter photographs were resized and re-encoded only; two earlier Grounds photographs received the client-approved removal of identifying canopy wording.
+- Normalized EXIF/HEIC rotation, converted color to sRGB when an embedded profile was present, stripped private metadata, and exported high-quality WebP or JPEG derivatives.
 - Service anchors are capped at 1800 px on the long edge. Gallery assets are capped at 1600 px.
 - Re-encoded the supplied 720p hero as browser-compatible H.264 MP4 with fast-start metadata, a 48-frame keyframe interval, and no audio track. The original is approximately 18 MB; the visually reviewed web copy is approximately 3.9 MB.
 
 ## Coverage gaps for the next client shoot
 
-- Only one strong winter image is available. Capture plowing in progress, walkway clearing, and roof shoveling.
+- Winter coverage now includes plowing, salt-spreading equipment, active storms, and roadway conditions. A future shoot should still capture walkway clearing and roof shoveling.
 - The office photographs communicate a clean result but not janitorial work. Capture the team in action plus one controlled before/after.
 - No convincing project photography currently covers ponds/fish stocking, handyman work, carpet/upholstery cleaning, or seasonal cleanup.
 - Specialty coverage is limited to one indoor pool photograph.

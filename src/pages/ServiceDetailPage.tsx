@@ -45,7 +45,7 @@ export function ServiceDetailPage() {
 
       {service.detailImage ? (
         <section className="service-detail__image section-pad">
-          <img src={service.detailImage} alt={service.alt} loading="lazy" />
+          <img src={service.detailImage} alt={service.detailAlt ?? service.alt} loading="lazy" />
         </section>
       ) : null}
 

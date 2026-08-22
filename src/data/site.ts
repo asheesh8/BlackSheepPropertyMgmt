@@ -11,6 +11,7 @@ export type Service = {
   primaryImage: string
   detailImage: string
   alt: string
+  detailAlt?: string
   cta: string
 }
 
@@ -78,9 +79,10 @@ export const services: Service[] = [
       'Driveways, walkways, and parking areas',
       'Roof shoveling',
     ],
-    primaryImage: '',
-    detailImage: '',
-    alt: '',
+    primaryImage: '/media/projects/winter-primary.jpg',
+    detailImage: '/media/projects/winter-detail.jpg',
+    alt: 'Snowplow clearing a winding road during a Vermont snowfall.',
+    detailAlt: 'Snowplow pushing snow during a nighttime storm.',
     cta: 'Ask about winter service',
   },
   {
@@ -118,13 +120,19 @@ export const contact = {
 export const projectImages = [
   { src: '/media/projects/gallery-03.webp', category: 'grounds', alt: 'Long, clean mower stripes across a residential lawn.' },
   { src: '/media/projects/interiors-primary.webp', category: 'interiors', alt: 'Clean modern commercial office with open workstations.' },
+  { src: '/media/projects/winter-primary.jpg', category: 'winter', alt: 'Snowplow clearing a winding road during a Vermont snowfall.' },
   { src: '/media/projects/gallery-02-clean.png', category: 'grounds', alt: 'Commercial entrance framed by colorful flower beds.' },
   { src: '/media/projects/specialty-primary.webp', category: 'specialty-care', alt: 'Maintained indoor lap pool and surrounding deck.' },
+  { src: '/media/projects/winter-detail.jpg', category: 'winter', alt: 'Snowplow pushing snow during a nighttime storm.' },
   { src: '/media/projects/gallery-09.webp', category: 'grounds', alt: 'Crew completing a large fresh-mulch installation.' },
   { src: '/media/projects/interiors-detail.webp', category: 'interiors', alt: 'Maintained commercial office and reception workspace.' },
+  { src: '/media/projects/winter-gallery-01.jpg', category: 'winter', alt: 'Front-mounted yellow snowplow parked after snowfall.' },
   { src: '/media/projects/gallery-01.webp', category: 'grounds', alt: 'Mulched perennial bed alongside a commercial walkway.' },
+  { src: '/media/projects/winter-gallery-02.jpg', category: 'winter', alt: 'Snow-removal truck working through heavy nighttime snowfall.' },
   { src: '/media/projects/gallery-04.webp', category: 'grounds', alt: 'Wide striped lawn after mowing.' },
+  { src: '/media/projects/winter-gallery-03.jpg', category: 'winter', alt: 'Rear salt spreader applying material to an icy roadway.' },
   { src: '/media/projects/gallery-06.webp', category: 'grounds', alt: 'Maintained residential entry with hanging baskets and foundation planting.' },
+  { src: '/media/projects/winter-gallery-04.jpg', category: 'winter', alt: 'Snow-covered intersection during an active nighttime storm.' },
   { src: '/media/projects/gallery-07.webp', category: 'grounds', alt: 'Fresh mower lines across a large tree-lined property.' },
   { src: '/media/projects/gallery-08.webp', category: 'grounds', alt: 'Stone-edged flower bed beside a walkway.' },
   { src: '/media/projects/gallery-10.webp', category: 'grounds', alt: 'Newly planted commercial bed with fresh mulch.' },
