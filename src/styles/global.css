@@ -2396,10 +2396,90 @@ p {
   padding-top: 0;
 }
 
-.about-photo img {
+.about-photo--statement {
+  position: relative;
+  isolation: isolate;
+}
+
+.about-photo__image {
+  overflow: hidden;
+}
+
+.about-photo__image img {
+  display: block;
   width: 100%;
   height: min(82svh, 58rem);
   object-fit: cover;
+}
+
+.about-standard-card {
+  position: absolute;
+  z-index: 2;
+  top: clamp(2.5rem, 6vw, 6rem);
+  right: var(--page-pad);
+  width: min(36rem, 43vw);
+}
+
+.about-standard-card__inner {
+  padding: clamp(1.6rem, 3vw, 2.5rem);
+  border: 1px solid rgba(9, 10, 9, 0.28);
+  background: var(--bone);
+  box-shadow: 0 1.5rem 4rem rgba(9, 10, 9, 0.22);
+  transform: rotate(0.7deg);
+}
+
+.about-standard-card__header,
+.about-standard-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.about-standard-card__header {
+  margin-bottom: clamp(1.8rem, 4vw, 3.5rem);
+}
+
+.about-standard-card__header .eyebrow {
+  margin: 0;
+}
+
+.about-standard-card__stamp {
+  display: grid;
+  width: 3.7rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.about-standard-card__stamp img {
+  width: 2.1rem;
+  height: 2.1rem;
+  object-fit: contain;
+}
+
+.about-standard-card h2 {
+  max-width: 9ch;
+  margin: 0 0 1.5rem;
+  font-size: clamp(2.6rem, 4.5vw, 4.8rem);
+  line-height: 0.92;
+}
+
+.about-standard-card__inner > p {
+  margin: 0;
+  font-size: clamp(0.9rem, 1.15vw, 1.05rem);
+  line-height: 1.55;
+}
+
+.about-standard-card__footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.53rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .mission > :last-child p {
@@ -2825,6 +2905,11 @@ p {
     margin-left: auto;
   }
 
+  .about-standard-card {
+    top: 2.5rem;
+    width: min(31rem, 50vw);
+  }
+
   .closing-cta {
     align-content: end;
   }
@@ -3148,6 +3233,37 @@ p {
 
   .about-slice__media > .reveal img {
     height: 62svh;
+  }
+
+  .about-photo__image img {
+    height: 58svh;
+  }
+
+  .about-standard-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: calc(100% - 0.8rem);
+    margin: -3.5rem 0 0 auto;
+  }
+
+  .about-standard-card__inner {
+    padding: 1.4rem;
+    transform: rotate(0.35deg);
+  }
+
+  .about-standard-card__header {
+    margin-bottom: 2rem;
+  }
+
+  .about-standard-card h2 {
+    font-size: clamp(2.7rem, 13vw, 4rem);
+  }
+
+  .about-standard-card__footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
   }
 
   .about-slice__mark {

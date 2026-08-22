@@ -22,23 +22,29 @@ export function AboutPage() {
         </Reveal>
       </section>
 
-      <section className="about-photo section-pad" aria-label="A visual expression of being different">
-        <Reveal>
+      <section className="about-photo about-photo--statement section-pad" aria-label="A visual expression of being different">
+        <Reveal className="about-photo__image">
           <img
             src="/media/projects/about-outlier-flower.jpg"
             alt="A single pink flower standing among white daisies."
             loading="lazy"
           />
         </Reveal>
-      </section>
-
-      <section className="mission section-pad section-dark">
-        <Reveal>
-          <p className="eyebrow eyebrow--light">Our standard</p>
-          <h2>People come<br />first.</h2>
-        </Reveal>
-        <Reveal delay={120}>
-          <p>Most importantly, we believe in treating people the way we would want to be treated. That means showing up, communicating honestly, taking pride in our work, and standing behind what we do. Whether we’re caring for a small residential lawn or maintaining a large commercial property, every customer deserves the same level of attention and respect.</p>
+        <Reveal className="about-standard-card" delay={120}>
+          <aside className="about-standard-card__inner" aria-labelledby="about-standard-title">
+            <div className="about-standard-card__header">
+              <p className="eyebrow">Our standard</p>
+              <span className="about-standard-card__stamp" aria-hidden="true">
+                <img src="/brand/black-sheep-mark.svg" alt="" />
+              </span>
+            </div>
+            <h2 id="about-standard-title">People come first.</h2>
+            <p>Most importantly, we believe in treating people the way we would want to be treated. That means showing up, communicating honestly, taking pride in our work, and standing behind what we do. Whether we’re caring for a small residential lawn or maintaining a large commercial property, every customer deserves the same level of attention and respect.</p>
+            <div className="about-standard-card__footer" aria-hidden="true">
+              <span>Black Sheep Landscaping</span>
+              <span>Northern Vermont</span>
+            </div>
+          </aside>
         </Reveal>
       </section>
 
