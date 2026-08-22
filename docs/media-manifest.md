@@ -39,7 +39,7 @@ Prepared from 26 owner-supplied photos, 17 usable image assets on the legacy Dan
 | `public/media/projects/gallery-12-clean.png` | Grounds / seasonal color | 1086×1448, edited website asset | Curved commercial flower bed surrounding a young tree; identifying canopy wording removed | Derived from the owner-supplied gallery photograph for client-approved site use |
 | `public/media/projects/winter-gallery-01.jpg` | Winter / equipment | 1600×1200, 618 KB | Front-mounted yellow snowplow after snowfall | `/Users/ashishsubedi/Library/Messages/Attachments/fe/14/21A5B1CC-E763-430A-A6EF-CB59907E4B70/IMG_7697.heic` |
 | `public/media/projects/winter-gallery-02.jpg` | Winter / active service | 1148×759, 411 KB | Snow-removal truck during heavy nighttime snowfall | `/Users/ashishsubedi/Library/Messages/Attachments/67/07/1032E21A-34B4-40DA-B363-BA92EBC40E56/IMG_7522.png` |
-| `public/media/projects/winter-gallery-03.jpg` | Winter / equipment | 1044×1740, 315 KB | Rear salt spreader applying material to a roadway | `/Users/ashishsubedi/Library/Messages/Attachments/2f/15/783E2E2F-B4B7-40CF-9EAE-C5172DF5165D/IMG_4033.png` |
+| `public/media/projects/winter-gallery-03-enhanced.jpg` | Winter / equipment | 972×1619, 521 KB | Rear salt spreader applying material to a roadway; clarity and compression restored for gallery display | AI-assisted quality restoration of `/Users/ashishsubedi/Library/Messages/Attachments/2f/15/783E2E2F-B4B7-40CF-9EAE-C5172DF5165D/IMG_4033.png` |
 | `public/media/projects/winter-gallery-04.jpg` | Winter / conditions | 1600×1200, 502 KB | Snow-covered intersection during an active nighttime storm | `/Users/ashishsubedi/Library/Messages/Attachments/54/04/441FFE71-D92C-4C3B-AB83-0D2077E724D4/IMG_9673.jpeg` |
 
 ## Processing notes
