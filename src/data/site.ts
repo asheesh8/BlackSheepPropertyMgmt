@@ -118,6 +118,7 @@ export const contact = {
 }
 
 export const projectImages = [
+  { src: '/media/projects/grounds-daisy-field-clean.jpg', category: 'grounds', alt: 'A field of white daisies in a maintained green landscape.' },
   { src: '/media/projects/gallery-03.webp', category: 'grounds', alt: 'Long, clean mower stripes across a residential lawn.' },
   { src: '/media/projects/interiors-primary.webp', category: 'interiors', alt: 'Clean modern commercial office with open workstations.' },
   { src: '/media/projects/winter-primary.jpg', category: 'winter', alt: 'Snowplow clearing a winding road during a Vermont snowfall.' },

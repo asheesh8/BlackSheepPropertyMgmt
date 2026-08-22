@@ -22,6 +22,16 @@ export function AboutPage() {
         </Reveal>
       </section>
 
+      <section className="about-photo section-pad" aria-label="A visual expression of being different">
+        <Reveal>
+          <img
+            src="/media/projects/about-outlier-flower.jpg"
+            alt="A single pink flower standing among white daisies."
+            loading="lazy"
+          />
+        </Reveal>
+      </section>
+
       <section className="mission section-pad section-dark">
         <Reveal>
           <p className="eyebrow eyebrow--light">Our standard</p>

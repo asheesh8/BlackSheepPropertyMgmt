@@ -1,6 +1,6 @@
 # Black Sheep media manifest
 
-Prepared from 26 owner-supplied photos, 17 usable image assets on the legacy Danaher Property Management site, the supplied Firefly video, and `blacksheepbackground.png`.
+Prepared from 28 owner-supplied photos, 17 usable image assets on the legacy Danaher Property Management site, the supplied Firefly video, and `blacksheepbackground.png`.
 
 ## Hero
 
@@ -21,6 +21,12 @@ Prepared from 26 owner-supplied photos, 17 usable image assets on the legacy Dan
 | `public/media/projects/winter-detail.jpg` | Winter | 1142×821, 233 KB | Snowplow pushing snow during a nighttime storm | `/Users/ashishsubedi/Library/Messages/Attachments/3d/13/AEF7E2AA-FD08-4CED-9CFB-E326C6A70684/IMG_4005.png` |
 | `public/media/projects/specialty-primary.webp` | Specialty | 1350×1800, 536 KB | Maintained indoor lap pool and surrounding deck | [Legacy-site asset](https://assets.cdn.filesafe.space/DwIuEg3GCYh7SQ47zhB1/media/67cb6a04456f0181073dc265.jpeg) |
 
+## About / editorial
+
+| File | Specs | Content | Source |
+| --- | --- | --- | --- |
+| `public/media/projects/about-outlier-flower.jpg` | 1320×875, 522 KB | One pink flower among white daisies; visual expression of the Black Sheep brand story | `/Users/ashishsubedi/Library/Messages/Attachments/e0/00/28072A22-2909-4902-BC0C-E349CF580E0E/IMG_3590.png` |
+
 ## Project gallery
 
 | File | Category | Specs | Content | Source |
@@ -37,6 +43,7 @@ Prepared from 26 owner-supplied photos, 17 usable image assets on the legacy Dan
 | `public/media/projects/gallery-10.webp` | Grounds / planting | 1200×1600, 671 KB | Newly planted commercial bed with fresh mulch | [Legacy-site asset](https://storage.googleapis.com/msgsndr/DwIuEg3GCYh7SQ47zhB1/media/67a533173553cd227fa74db7.jpeg) |
 | `public/media/projects/gallery-11.webp` | Grounds / commercial | 1200×1600, 548 KB | Long commercial walkway with newly mulched border | [Legacy-site asset](https://storage.googleapis.com/msgsndr/DwIuEg3GCYh7SQ47zhB1/media/67a79f049769a76f1a5e24c8.jpeg) |
 | `public/media/projects/gallery-12-clean.png` | Grounds / seasonal color | 1086×1448, edited website asset | Curved commercial flower bed surrounding a young tree; identifying canopy wording removed | Derived from the owner-supplied gallery photograph for client-approved site use |
+| `public/media/projects/grounds-daisy-field-clean.jpg` | Grounds / seasonal color | 1690×931, 618 KB | Field of white daisies in a maintained green landscape; imported camera-search overlay removed | AI-assisted cleanup of `/Users/ashishsubedi/Library/Messages/Attachments/ca/10/60576390-8FEE-4548-9D8A-3DAEB25ECE53/IMG_6929.png` |
 | `public/media/projects/winter-gallery-01.jpg` | Winter / equipment | 1600×1200, 618 KB | Front-mounted yellow snowplow after snowfall | `/Users/ashishsubedi/Library/Messages/Attachments/fe/14/21A5B1CC-E763-430A-A6EF-CB59907E4B70/IMG_7697.heic` |
 | `public/media/projects/winter-gallery-02.jpg` | Winter / active service | 1148×759, 411 KB | Snow-removal truck during heavy nighttime snowfall | `/Users/ashishsubedi/Library/Messages/Attachments/67/07/1032E21A-34B4-40DA-B363-BA92EBC40E56/IMG_7522.png` |
 | `public/media/projects/winter-gallery-03-enhanced.jpg` | Winter / equipment | 972×1619, 521 KB | Rear salt spreader applying material to a roadway; clarity and compression restored for gallery display | AI-assisted quality restoration of `/Users/ashishsubedi/Library/Messages/Attachments/2f/15/783E2E2F-B4B7-40CF-9EAE-C5172DF5165D/IMG_4033.png` |
@@ -44,7 +51,7 @@ Prepared from 26 owner-supplied photos, 17 usable image assets on the legacy Dan
 
 ## Processing notes
 
-- Preserved each selected photo's natural aspect ratio. The new Winter photographs were resized and re-encoded only; two earlier Grounds photographs received the client-approved removal of identifying canopy wording.
+- Preserved each selected photo's natural aspect ratio. The new Winter photographs were resized and re-encoded only; two earlier Grounds photographs received the client-approved removal of identifying canopy wording, and the daisy field received removal of an imported camera-search overlay.
 - Normalized EXIF/HEIC rotation, converted color to sRGB when an embedded profile was present, stripped private metadata, and exported high-quality WebP or JPEG derivatives.
 - Service anchors are capped at 1800 px on the long edge. Gallery assets are capped at 1600 px.
 - Re-encoded the supplied 720p hero as browser-compatible H.264 MP4 with fast-start metadata, a 48-frame keyframe interval, and no audio track. The original is approximately 18 MB; the visually reviewed web copy is approximately 3.9 MB.
