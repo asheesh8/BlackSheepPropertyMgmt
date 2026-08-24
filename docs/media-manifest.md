@@ -6,8 +6,8 @@ Prepared from 28 owner-supplied photos, 17 usable image assets on the legacy Dan
 
 | File | Specs | Purpose | Source |
 | --- | --- | --- | --- |
-| `public/media/hero/black-sheep-hero.mp4` | H.264 MP4, 1280×720, 15.04 s, ~2.17 Mbps, 3.9 MB | Homepage cinematic hero; black sheep separates from the white herd | `/Users/ashishsubedi/Downloads/Firefly Continue seamlessly from the uploaded first frame. Preserve the exact black sheep, white flo.mp4` |
-| `public/media/hero/black-sheep-poster.webp` | WebP, 1672×941, 143 KB | Video poster and reduced-motion/static fallback | `blacksheepbackground.png` |
+| `public/media/hero/black-sheep-hero.mp4` | H.264 MP4, 1280×720, 15.04 s, ~2.17 Mbps, 4.1 MB | Homepage cinematic hero; black sheep separates from the white herd and walks toward a green pasture | Higgsfield Seedance 2.5 `video_edit` pass over the original Firefly hero (job `abc3a688`), regreening the pasture at the client's request |
+| `public/media/hero/black-sheep-poster.webp` | WebP, 1672×940, 88 KB | Video poster and reduced-motion/static fallback | First frame of the regreened hero, so the poster matches the film |
 
 ## Service anchors
 
@@ -17,8 +17,7 @@ Prepared from 28 owner-supplied photos, 17 usable image assets on the legacy Dan
 | `public/media/projects/grounds-detail.webp` | Grounds | 1350×1800, 807 KB | Fresh commercial flower bed with ornamental grasses and dark mulch | `/Users/ashishsubedi/Library/Messages/Attachments/ee/14/7B477046-56AA-4DCB-B70B-896D12C84B76/IMG_2058.heic` |
 | `public/media/projects/interiors-primary.webp` | Interiors | 1800×1350, 477 KB | Clean modern commercial office with open workstations | [Legacy-site asset](https://assets.cdn.filesafe.space/DwIuEg3GCYh7SQ47zhB1/media/67cb6002456f013e003db77d.jpeg) |
 | `public/media/projects/interiors-detail.webp` | Interiors | 1800×1350, 290 KB | Maintained commercial office and reception workspace | [Legacy-site asset](https://assets.cdn.filesafe.space/DwIuEg3GCYh7SQ47zhB1/media/67cb663888e6200d0420ab57.jpeg) |
-| `public/media/projects/winter-primary.jpg` | Winter | 1163×694, 343 KB | Snowplow clearing a winding road during snowfall | `/Users/ashishsubedi/Library/Messages/Attachments/ae/14/6C104316-0D02-43A9-AFA3-C1484493D2B0/IMG_6509.png` |
-| `public/media/projects/winter-detail.jpg` | Winter | 1142×821, 233 KB | Snowplow pushing snow during a nighttime storm | `/Users/ashishsubedi/Library/Messages/Attachments/3d/13/AEF7E2AA-FD08-4CED-9CFB-E326C6A70684/IMG_4005.png` |
+| `public/media/projects/winter-detail.jpg` | Winter | 1142×821, 233 KB | Snowplow pushing snow during a nighttime storm; now the Winter service anchor | `/Users/ashishsubedi/Library/Messages/Attachments/3d/13/AEF7E2AA-FD08-4CED-9CFB-E326C6A70684/IMG_4005.png` |
 | `public/media/projects/specialty-primary.webp` | Specialty | 1350×1800, 536 KB | Maintained indoor lap pool and surrounding deck | [Legacy-site asset](https://assets.cdn.filesafe.space/DwIuEg3GCYh7SQ47zhB1/media/67cb6a04456f0181073dc265.jpeg) |
 
 ## About / editorial
@@ -51,6 +50,8 @@ Prepared from 28 owner-supplied photos, 17 usable image assets on the legacy Dan
 
 ## Processing notes
 
+- Regreened the hero film with Higgsfield Seedance 2.5 in `video_edit` mode, editing the existing footage rather than regenerating it, so the black sheep, the flock, the camera move, the 24 fps timing, and the 15.04 s duration all carry over unchanged. Only the pasture was transformed: dull olive grass became lush maintained green, and the hillside the sheep walks toward reads as an open green pasture. The overcast grey haze lifted into a soft warm sky as a side effect of the edit. Re-encoded through AVFoundation to H.264 with fast-start and a 48-frame keyframe interval, no audio track.
+- Retired `winter-primary.jpg` at the client's request; Winter now leads with `winter-detail.jpg` and uses `winter-gallery-02.jpg` as its supporting image.
 - Preserved each selected photo's natural aspect ratio. The new Winter photographs were resized and re-encoded only; two earlier Grounds photographs received the client-approved removal of identifying canopy wording, and the daisy field received removal of an imported camera-search overlay.
 - Normalized EXIF/HEIC rotation, converted color to sRGB when an embedded profile was present, stripped private metadata, and exported high-quality WebP or JPEG derivatives.
 - Service anchors are capped at 1800 px on the long edge. Gallery assets are capped at 1600 px.
