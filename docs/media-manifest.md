@@ -6,8 +6,8 @@ Prepared from 28 owner-supplied photos, 17 usable image assets on the legacy Dan
 
 | File | Specs | Purpose | Source |
 | --- | --- | --- | --- |
-| `public/media/hero/black-sheep-hero.mp4` | H.264 MP4, 1280×720, 15.04 s, ~2.17 Mbps, 4.1 MB | Homepage cinematic hero; black sheep separates from the white herd and walks toward a green pasture | Higgsfield Seedance 2.5 `video_edit` pass over the original Firefly hero (job `abc3a688`), regreening the pasture at the client's request |
-| `public/media/hero/black-sheep-poster.webp` | WebP, 1672×940, 88 KB | Video poster and reduced-motion/static fallback | First frame of the regreened hero, so the poster matches the film |
+| `public/media/hero/black-sheep-hero.mp4` | H.264 MP4, 1280×720, 15.07 s, 30 fps, ~2.16 Mbps, 4.1 MB | Homepage cinematic hero; black sheep separates from the white herd and walks toward a green pasture | Client-supplied `BlackSheepV2.mov` (16 MB, 30 fps, with audio), re-encoded for web |
+| `public/media/hero/black-sheep-poster.webp` | WebP, 1672×940, 61 KB | Video poster and reduced-motion/static fallback | First frame of the current hero, so the poster matches the film |
 
 ## Service anchors
 
@@ -50,7 +50,7 @@ Prepared from 28 owner-supplied photos, 17 usable image assets on the legacy Dan
 
 ## Processing notes
 
-- Regreened the hero film with Higgsfield Seedance 2.5 in `video_edit` mode, editing the existing footage rather than regenerating it, so the black sheep, the flock, the camera move, the 24 fps timing, and the 15.04 s duration all carry over unchanged. Only the pasture was transformed: dull olive grass became lush maintained green, and the hillside the sheep walks toward reads as an open green pasture. The overcast grey haze lifted into a soft warm sky as a side effect of the edit. Re-encoded through AVFoundation to H.264 with fast-start and a 48-frame keyframe interval, no audio track.
+- Replaced the hero with the client-supplied `BlackSheepV2.mov`: same 15 s arc and framing, grass graded slightly greener, and the natural grey Vermont overcast kept. Re-encoded through AVFoundation to H.264 at ~2.16 Mbps with fast-start and a 48-frame keyframe interval, and the source AAC audio track dropped (the hero plays muted). This supersedes an earlier Higgsfield Seedance 2.5 regreen pass, which pushed the grass much greener but turned the overcast into a warm sky; that version is in git history at `1bf6532`.
 - Retired `winter-primary.jpg` at the client's request; Winter now leads with `winter-detail.jpg` and uses `winter-gallery-02.jpg` as its supporting image.
 - Preserved each selected photo's natural aspect ratio. The new Winter photographs were resized and re-encoded only; two earlier Grounds photographs received the client-approved removal of identifying canopy wording, and the daisy field received removal of an imported camera-search overlay.
 - Normalized EXIF/HEIC rotation, converted color to sRGB when an embedded profile was present, stripped private metadata, and exported high-quality WebP or JPEG derivatives.
