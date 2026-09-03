@@ -6,8 +6,9 @@ Prepared from 28 owner-supplied photos, 17 usable image assets on the legacy Dan
 
 | File | Specs | Purpose | Source |
 | --- | --- | --- | --- |
-| `public/media/hero/black-sheep-hero.mp4` | H.264 MP4, 1280×720, 15.07 s, 30 fps, ~2.16 Mbps, 4.1 MB | Homepage cinematic hero; black sheep separates from the white herd and walks toward a green pasture | Client-supplied `BlackSheepV2.mov` (16 MB, 30 fps, with audio), re-encoded for web |
-| `public/media/hero/black-sheep-poster.webp` | WebP, 1672×940, 61 KB | Video poster and reduced-motion/static fallback | First frame of the current hero, so the poster matches the film |
+| `public/media/hero/black-sheep-hero-2k.mp4` | H.264 MP4, 2560×1440, 15.07 s, 30 fps, ~5 Mbps, 8.9 MB | Homepage cinematic hero served to viewports ≥1024 px | `BlackSheepV2.mov` upscaled 720p→2K by Higgsfield/ByteDance (`aigc` preset, job `2bc9203c`), re-encoded for web |
+| `public/media/hero/black-sheep-hero.mp4` | H.264 MP4, 1280×720, 15.07 s, 30 fps, ~2.16 Mbps, 4.1 MB | Same film at 720p; served to narrow viewports and Data Saver | Client-supplied `BlackSheepV2.mov` (16 MB, 30 fps, with audio), re-encoded for web |
+| `public/media/hero/black-sheep-poster.webp` | WebP, 2048×1152, 77 KB | Video poster and reduced-motion/static fallback | First frame of the 2K master, so the poster matches the film and stays crisp on high-density displays |
 
 ## Service anchors
 
@@ -50,6 +51,8 @@ Prepared from 28 owner-supplied photos, 17 usable image assets on the legacy Dan
 
 ## Processing notes
 
+- Upscaled the hero to 2K. Higgsfield/ByteDance (`aigc` preset, 30 fps) took the 16 MB `BlackSheepV2.mov` master from 1280×720 to 2560×1440; the pass genuinely resolves new detail rather than resampling — edge energy on the black sheep's fleece roughly doubled against a Lanczos upscale of the same frame. Encoded at 5 Mbps, which measures 41.9 dB PSNR against the 28 MB raw; 7 and 9 Mbps gained only 0.7 and 1.0 dB for another 3.5 and 6.5 MB, so they were not worth the weight.
+- `CinematicHero` picks its source at mount: viewports ≥1024 px get the 8.9 MB 2K file, narrower ones and any client reporting Data Saver keep the 4.1 MB 720p file. The hero autoplays, so the file downloads on every homepage visit — the split keeps phones off the larger download for a frame that is aggressively cropped there anyway.
 - Replaced the hero with the client-supplied `BlackSheepV2.mov`: same 15 s arc and framing, grass graded slightly greener, and the natural grey Vermont overcast kept. Re-encoded through AVFoundation to H.264 at ~2.16 Mbps with fast-start and a 48-frame keyframe interval, and the source AAC audio track dropped (the hero plays muted). This supersedes an earlier Higgsfield Seedance 2.5 regreen pass, which pushed the grass much greener but turned the overcast into a warm sky; that version is in git history at `1bf6532`.
 - Retired `winter-primary.jpg` at the client's request; Winter now leads with `winter-detail.jpg` and uses `winter-gallery-02.jpg` as its supporting image.
 - Preserved each selected photo's natural aspect ratio. The new Winter photographs were resized and re-encoded only; two earlier Grounds photographs received the client-approved removal of identifying canopy wording, and the daisy field received removal of an imported camera-search overlay.

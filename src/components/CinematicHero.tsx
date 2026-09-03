@@ -2,6 +2,19 @@ import { useRef, useState } from 'react'
 import { Link } from 'wouter'
 import { useSectionProgress } from '../hooks/useSectionProgress'
 
+const HERO_720 = '/media/hero/black-sheep-hero.mp4'
+const HERO_2K = '/media/hero/black-sheep-hero-2k.mp4'
+
+// The 2K master is 9.4 MB against 4.1 MB for the 720p file. Wide viewports get
+// the detail; narrow ones crop the frame hard anyway, so they keep the lighter
+// file. Data Saver always gets the lighter file.
+function pickHeroSource() {
+  if (typeof window === 'undefined') return HERO_720
+  const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection
+  if (connection?.saveData) return HERO_720
+  return window.matchMedia('(min-width: 1024px)').matches ? HERO_2K : HERO_720
+}
+
 function rangeOpacity(progress: number, start: number, peakStart: number, peakEnd: number, end: number) {
   if (progress <= start || progress >= end) return 0
   if (progress < peakStart) return (progress - start) / (peakStart - start)
@@ -13,6 +26,7 @@ export function CinematicHero() {
   const { ref, progress, reducedMotion } = useSectionProgress<HTMLElement>()
   const videoRef = useRef<HTMLVideoElement>(null)
   const [paused, setPaused] = useState(false)
+  const [heroSource] = useState(pickHeroSource)
 
   const firstOpacity = reducedMotion ? 0 : rangeOpacity(progress, 0, 0.02, 0.17, 0.29)
   const secondOpacity = reducedMotion ? 0 : rangeOpacity(progress, 0.22, 0.29, 0.42, 0.55)
@@ -50,7 +64,7 @@ export function CinematicHero() {
               poster="/media/hero/black-sheep-poster.webp"
               onEnded={() => setPaused(true)}
             >
-              <source src="/media/hero/black-sheep-hero.mp4" type="video/mp4" />
+              <source src={heroSource} type="video/mp4" />
             </video>
           ) : (
             <img src="/media/hero/black-sheep-poster.webp" alt="" />
