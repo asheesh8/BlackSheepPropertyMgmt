@@ -2,6 +2,12 @@
 
 Complete rebrand and responsive marketing site for Black Sheep Landscaping, serving commercial and residential clients across Northern Vermont.
 
+**Live:** https://black-sheep-property-mgmt.vercel.app
+
+**Stack:** Vite 7 + React 19 + TypeScript, plain CSS. Static build, no server code, no environment variables.
+
+> **Hosting note:** the live site is on Vercel (`vercel.json` provides the SPA rewrite), but the estimate form is built for **Netlify Forms** (see *Hosting and form setup* below). On Vercel nothing receives those submissions — either host on Netlify or add a form endpoint before launch.
+
 ## What is included
 
 - Cinematic sheep-film homepage with a reduced-motion poster fallback
